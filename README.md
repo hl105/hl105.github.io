@@ -1,2 +1,2 @@
 # hl105.github.io
-blog
+![link to blog](hl105.github.io)
