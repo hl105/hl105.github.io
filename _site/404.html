@@ -13,6 +13,9 @@
 <meta name="description" content="A place where I document new discoveries in my computer science journey. (and a place where you can learn more about me!)">
 
 
+  <meta name="author" content="Johanna">
+  
+
 
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_US">
@@ -33,6 +36,10 @@
 
 
 
+  
+
+  
+
 
 <link rel="canonical" href="http://localhost:4000/404.html">
 
@@ -44,12 +51,14 @@
     "@context": "https://schema.org",
     
       "@type": "Person",
-      "name": null,
+      "name": "Johanna Hoonsun Lee",
       "url": "http://localhost:4000/"
     
   }
 </script>
 
+
+  <meta name="google-site-verification" content="lYp6hG_RDpNYc1CxzUiWJ9MfMENaynR43laMGRR60JY" />
 
 
 
@@ -72,8 +81,11 @@
 
 <!-- For all browsers -->
 <link rel="stylesheet" href="/assets/css/main.css">
+<link href="/assets/css/style.css" rel="stylesheet">
+<link rel="shortcut icon" type="image/png" href="/favicon.png">
 <link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
 
 
 
@@ -94,10 +106,6 @@
   </ul>
 </nav>
 
-    <!--[if lt IE 9]>
-<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
-<![endif]-->
-
     
 
 <div class="masthead">
@@ -107,9 +115,22 @@
         
         <a class="site-title" href="/">
           Johanna's blog
-          
+          <span class="site-subtitle">home for rediscoveries</span>
         </a>
-        <ul class="visible-links"></ul>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/">Home</a>
+            </li><li class="masthead__menu-item">
+              <a href="/about/">About</a>
+            </li><li class="masthead__menu-item">
+              <a href="/categories/">Categories</a>
+            </li><li class="masthead__menu-item">
+              <a href="/year-archive/">Archive</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
         
         <button class="greedy-nav__toggle hidden" type="button">
           <span class="visually-hidden">Toggle menu</span>
@@ -147,6 +168,17 @@
     </div>
 
     
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
 
     <div id="footer" class="page__footer">
       <footer>
@@ -156,7 +188,15 @@
         <div class="page__footer-follow">
   <ul class="social-icons">
     
+      <li><strong>Follow:</strong></li>
+    
 
+    
+      
+        
+          <li><a href="https://github.com/hl105" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
     
 
     
@@ -165,7 +205,7 @@
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2024 Johanna's blog. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">&copy; 2024 Johanna Hoonsun Lee. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
 
       </footer>
     </div>
@@ -175,6 +215,10 @@
 
 
 
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
 
 
 
