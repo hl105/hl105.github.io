@@ -9,7 +9,7 @@ var store = [{
     "excerpt":"     404     Page not found :(    The requested page could not be found.   ","url": "http://localhost:4000/404.html"
   },{
     "title": null,
-    "excerpt":"  Hello World!           welcome to my blog.   Resume                03/28/2024 - under construction 👷‍♀️         TikTok Series: Project 1         Spotify API Exploration         LLaMA case study             Personal Life            What do I do outside of CS?                                                        (kpop) concerts                                                            photography                                                            cooking 101                                                            love traveling!                              ","url": "http://localhost:4000/about/"
+    "excerpt":"  Hello World!           welcome to my blog.   Resume                03/28/2024 - under construction 👷‍♀️         TikTok Series: Project 1         Spotify API Exploration         LLaMA case study             Personal Life            my life as a college sophomore                                                        (kpop) concerts                                                            photography                                                            cooking 101                                                            love traveling!                              ","url": "http://localhost:4000/about/"
   },{
     "title": null,
     "excerpt":"","url": "http://localhost:4000/"

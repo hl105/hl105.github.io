@@ -14,7 +14,7 @@ classes: wide
 <div class="content2">
     <img src="/assets/images/profile/cat.gif">
 </div>
-<div class="maintext">welcome to my blog.</div>
+<div class="content1 maintext">welcome to my blog.</div>
 </div>
 
 ## Resume 
@@ -31,7 +31,7 @@ classes: wide
 ## Personal Life
 
 <div class="content2">
-        <div class="title">What do I do outside of CS?</div>
+        <div class="title">my life as a college sophomore</div>
         <div class="images">
             <div class="image-text">
                 <img src="/assets/images/profile/concert.png">
