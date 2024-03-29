@@ -85,7 +85,7 @@ yandex_site_verification :
 baidu_site_verification  :
 
 # Social Sharing
-twitter:
+twitter: 
   username               :
 facebook:
   username               :
@@ -94,14 +94,14 @@ facebook:
 og_image                 : # Open Graph/Twitter default site image
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
-social:
+social: 
   type                   : # Person or Organization (defaults to Person)
   name                   : # If the user or organization name differs from the site's name
   links: # An array of links to social media profiles
 
 # Analytics
 analytics:
-  provider               : false # false (default), "google", "google-universal", "google-gtag", "custom"
+  provider               : "google" # false (default), "google", "google-universal", "google-gtag", "custom"
   google:
     tracking_id          :
     anonymize_ip         : # true, false (default)
@@ -272,6 +272,5 @@ defaults:
       author_profile: true
       read_time: false
       comments: true
-
       share: true
       related: true

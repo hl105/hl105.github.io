@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-03-28T23:59:36-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Johanna’s blog</title><subtitle>A place where I document new discoveries in my computer science journey. (and a place where you can learn more about me!)</subtitle><author><name>Johanna</name><email>hl105@wellesley.edu</email></author><entry><title type="html">welcome to my blog</title><link href="http://localhost:4000/life/welcome/" rel="alternate" type="text/html" title="welcome to my blog" /><published>2024-03-27T23:30:00-04:00</published><updated>2024-03-28T03:26:00-04:00</updated><id>http://localhost:4000/life/welcome</id><content type="html" xml:base="http://localhost:4000/life/welcome/"><![CDATA[<!--postNo: 2024-03-05-->
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-03-29T19:36:09-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Johanna’s blog</title><subtitle>A place where I document new discoveries in my computer science journey. (and a place where you can learn more about me!)</subtitle><author><name>Johanna</name><email>hl105@wellesley.edu</email></author><entry><title type="html">concert logs</title><link href="http://localhost:4000/life/concert_log/" rel="alternate" type="text/html" title="concert logs" /><published>2024-03-29T07:00:00-04:00</published><updated>2024-03-29T07:00:00-04:00</updated><id>http://localhost:4000/life/concert_log</id><content type="html" xml:base="http://localhost:4000/life/concert_log/"><![CDATA[<!--postNo: 2024-03-27-->
 
 <p><img src="/assets/images/posts/kirby.gif" alt="" /><br />
 under construction!</p>
@@ -17,4 +17,23 @@ commands
 <p>more things to do</p>
 
 <h2 id="reference">Reference</h2>
-<p>some links</p>]]></content><author><name>Johanna</name><email>hl105@wellesley.edu</email></author><category term="life" /><category term="blog" /><category term="Jekyll" /><category term="gitblog" /><summary type="html"><![CDATA[testing blog posts]]></summary></entry></feed>
+<p>some links</p>]]></content><author><name>Johanna</name><email>hl105@wellesley.edu</email></author><category term="life" /><category term="kpop" /><category term="hobbies" /><summary type="html"><![CDATA[spotify tour playlist on repeat]]></summary></entry><entry><title type="html">welcome to my blog</title><link href="http://localhost:4000/life/welcome/" rel="alternate" type="text/html" title="welcome to my blog" /><published>2024-03-27T23:30:00-04:00</published><updated>2024-03-28T03:26:00-04:00</updated><id>http://localhost:4000/life/welcome</id><content type="html" xml:base="http://localhost:4000/life/welcome/"><![CDATA[<!--postNo: 2024-03-27-->
+
+<p><img src="/assets/images/posts/kirby.gif" alt="" /><br />
+under construction!</p>
+
+<h2 id="jekyll">Jekyll</h2>
+<p>instructions</p>
+
+<h2 id="installation">Installation</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># instructions</span>
+commands 
+</code></pre></div></div>
+
+<h2 id="what-to-do">What to do</h2>
+
+<p>more things to do</p>
+
+<h2 id="reference">Reference</h2>
+<p>some links</p>]]></content><author><name>Johanna</name><email>hl105@wellesley.edu</email></author><category term="life" /><category term="Jekyll" /><category term="blog_logistics" /><summary type="html"><![CDATA[testing blog posts]]></summary></entry></feed>

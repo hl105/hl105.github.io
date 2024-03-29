@@ -1,11 +1,11 @@
 ---
-title: welcome to my blog # title (necessary*)
-excerpt: testing blog posts # subtitle / meta description (*)
-date: 2024-03-27 22:30:00 -0500      # created (*)
-lastmod: 2024-03-28 02:26:00 -0500   # final edit (*)
-last_modified_at: 2024-03-28 02:26:00 -0500   # final edit  (*)
+title: concert logs # title (necessary*)
+excerpt: spotify tour playlist on repeat  # subtitle / meta description (*)
+date: 2024-03-29 6:00:00 -0500      # created (*)
+lastmod: 2024-03-29 6:00:00 -0500   # final edit (*)
+last_modified_at: 2024-03-29 6:00:00 -0500  # final edit  (*)
 categories: life         # multiple categories allowed (*)
-tags: Jekyll blog_logistics # multiple tags allowed (*)
+tags: kpop hobbies # multiple tags allowed (*)
 classes:         # wide (no sticky toc) / empty (default) 
 toc: true        # table of contents
 toc_label:       # toc name
@@ -13,7 +13,7 @@ toc_sticky: true # moving toc (true)// has to be x wide
 header: 
   image:         # header img 
   teaser:        # teaser img
-  overlay_image: /assets/images/banners/banner.png  #header overlay with title
+  overlay_image: /assets/images/posts/stadium.png  #header overlay with title
   # overlay_color: '#333'            # header background color
   video:
     id:                      # video ID (end of URL)

@@ -1,15 +1,21 @@
 var store = [{
         "title": "welcome to my blog",
         "excerpt":"    under construction!   Jekyll  instructions   Installation   # instructions commands    What to do   more things to do   Reference  some links  ","categories": ["life"],
-        "tags": ["blog","Jekyll","gitblog"],
+        "tags": ["Jekyll","blog_logistics"],
         "url": "/life/welcome/",
+        "teaser": null
+      },{
+        "title": "concert logs",
+        "excerpt":"    under construction!   Jekyll  instructions   Installation   # instructions commands    What to do   more things to do   Reference  some links  ","categories": ["life"],
+        "tags": ["kpop","hobbies"],
+        "url": "/life/concert_log/",
         "teaser": null
       },{
     "title": null,
     "excerpt":"     404     Page not found :(    The requested page could not be found.   ","url": "http://localhost:4000/404.html"
   },{
     "title": null,
-    "excerpt":"  Hello World!           welcome to my blog.   Resume                03/28/2024 - under construction 👷‍♀️         TikTok Series: Project 1         Spotify API Exploration         LLaMA case study             Personal Life            my life as a college sophomore                                                        (kpop) concerts                                                            photography                                                            cooking 101                                                            love traveling!                              ","url": "http://localhost:4000/about/"
+    "excerpt":"  Hello World!           welcome to my blog.   Resume                03/28/2024 - under construction 👷‍♀️         TikTok Series: Project 1         Spotify API Exploration         LLaMA case study                           Personal Life       my life as a college sophomore                                                             (kpop) concerts                                                                              photography                                                                              cooking 101                                                                              love traveling!                               ","url": "http://localhost:4000/about/"
   },{
     "title": null,
     "excerpt":"","url": "http://localhost:4000/"

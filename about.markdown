@@ -5,8 +5,8 @@ author_profile: true
 classes: wide
 ---
 
-<link href="style.css" rel="stylesheet">
 
+<link href="style.css" rel="stylesheet">
 
 ## Hello World!
 
@@ -25,29 +25,38 @@ classes: wide
         <li><a href="https://github.com/hl105/spotify-diary">Spotify API Exploration</a></li>
         <li><a href="https://github.com/hl105/LLaMA-Case-Study">LLaMA case study</a></li>
     </ul>
-    <iframe src="https://drive.google.com/file/d/1-RJ0MJqQC0rLKBmhpYQPQqj6fG_iYBI9/preview" width="400" height="565" allow="autoplay"></iframe>
+    <div class="iframe-container">
+        <iframe src="https://drive.google.com/file/d/1-RJ0MJqQC0rLKBmhpYQPQqj6fG_iYBI9/preview" allow="autoplay"></iframe>
+    </div>
 </div>
 
 ## Personal Life
-
 <div class="content2">
-        <div class="title">my life as a college sophomore</div>
-        <div class="images">
+    <div class="title">my life as a college sophomore</div>
+    <div class="images">
+        <a href="#" class="image-text-button">
             <div class="image-text">
                 <img src="/assets/images/profile/concert.png">
                 <div class="text">(kpop) concerts</div>
             </div>
+        </a>
+        <a href="#" class="image-text-button">
             <div class="image-text">
                 <img src="/assets/images/profile/film.png">
                 <div class="text">photography</div>
             </div>
+        </a>
+        <a href="#" class="image-text-button">
             <div class="image-text">
                 <img src="/assets/images/profile/pepero.png">
                 <div class="text">cooking 101</div>
             </div>
+        </a>
+        <a href="#" class="image-text-button">
             <div class="image-text">
                 <img src="/assets/images/profile/travel.png">
                 <div class="text">love traveling! <br></div>
             </div>
-        </div>
+        </a>
     </div>
+</div>
