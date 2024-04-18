@@ -95,7 +95,8 @@ a {
 }
 
 .content2 img{
-    height: 100%;
+    max-width: 100%; /* Limit image width to not exceed its container */
+    height: auto; /* Maintains aspect ratio */
 }
 
 .content2 .images{
