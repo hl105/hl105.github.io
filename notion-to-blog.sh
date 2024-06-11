@@ -6,11 +6,12 @@ conda activate blog
 
 # Prompt the user to choose a category
 echo "Select a category for the blog post:"
-select category in "project" "life"
+select category in "project" "life" "R"
 do
     case $category in
         project ) output_dir="./_posts/projects"; break;;
         life ) output_dir="./_posts/life"; break;;
+        R )  output_dir="./_posts/R"; break;;
         * ) echo "Invalid option. Please select a number from the list.";;
     esac
 done
