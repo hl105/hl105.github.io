@@ -1,7 +1,7 @@
 /* ==========================================================================
    SINGLE PAGE/POST
    ========================================================================== */
-
+   
 #main {
   @include clearfix;
   margin-left: auto;
@@ -161,7 +161,7 @@ body {
 
   dd {
     margin-left: 1em;
-    font-family: $sans-serif;
+    font-family: $monospace;
     font-size: $type-size-6;
   }
 

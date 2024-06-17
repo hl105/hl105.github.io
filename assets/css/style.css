@@ -1,3 +1,5 @@
+
+
 body{
     overflow-y: auto;
     display: flex;
@@ -25,6 +27,7 @@ img{
 .activities-list li {
     margin-bottom: 10px; 
 }
+
 
 .activities-list li a {
     font-size: 16px; /* Size of the link text */
