@@ -3,6 +3,12 @@
 search: false
 ---
 
+article.page {
+    float: left;
+    width: 100%;
+}
+
+
 @charset "utf-8";
 
 @import "custom"; // custom styles
