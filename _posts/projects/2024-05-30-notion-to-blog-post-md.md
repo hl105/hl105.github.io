@@ -21,7 +21,7 @@ sitemap:
 author:
 ---
 
-A few days ago, I asked myself why I’ve been writing my random thoughts on my Notion page instead of this blog. The conclusion: it’s just too much work writing in markdown, creating a file with a specific format, and uploading it. So I created a quick notion to blog direct conversion pipeline!
+Now why have I not been writing on this blog? It’s just too much work writing in markdown, creating a file with a specific format, and uploading it. So I created a quick notion to blog direct conversion pipeline.
 
 
 ### Creating the notion-to-md.js file
@@ -203,11 +203,7 @@ Note that I am using a conda environment “blog”
 	```
 
 
-Now we have a simple program where the script asks the user the info it needs:
-
-
-![Screenshot_2024-05-30_at_6.26.21_PM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/46a454de-d143-4526-a01f-0f13adda7dcc/9552b0db-99c2-4142-b740-7a0ee9b80ae8/Screenshot_2024-05-30_at_6.26.21_PM.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240530%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240530T222658Z&X-Amz-Expires=3600&X-Amz-Signature=4a892c37dc6a7d736eb0de83e855edbf180a142f75aa65ff696595af43ff0197&X-Amz-SignedHeaders=host&x-id=GetObject)
-
+Now we have a simple program where the script asks the user the info it needs.
 
 The resulting file is automatically saved in the path like this: ./hl105.github.io/_posts/projects/2024-05-30-7c5e1cf7e4c34a5585f829533b17d3d9.md
 
