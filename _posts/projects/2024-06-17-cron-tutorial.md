@@ -21,43 +21,7 @@ sitemap:
 author:
 ---
 
-<!--postNo: 2024-06-17-->
-
-
-### Q&A section 
-
-
-**problem**: need to do conda init before you need to conda activate
-
-
-**solution**: `source ~/.bashrc`  → `conda init --all`
-
-
-**problem**: conda (base) shows up on terminal prompt
-
-
-**solution**: `conda config --set auto_activate_base False`
-
-
-**problem**: permissioned denied to some file
-
-
-**solution:** `chmod +x path/to/file` (chmod: command to change file permissions, +x: adds executable permission to file)
-
-
-**problem:** editor isn’t nano
-
-
-**solution**: `export EDITOR=nano` (sets nano to default), for crontab→ `export VISUAL=nano`
-
-
-**problem**: command not found
-
-
-**solution**: check shebang (character sequence at the beginning of a script that specifies the path to the interpreter that should execute the script) & **source the z shell** becaues cron jobs run in a much more limited environment compared to your interactive shell session, we need the .zshrc to be executed because it’s where we initialized conda 
-
-
-### setting up cron
+setting up cron
 
 - create scripts folder `mkdir scripts`
 - create your direction file `touch run_gtrends_politics.sh`  in it
@@ -115,6 +79,51 @@ author:
 - `0 7-23 * * * /Users/ihoonsun/scripts/run_pytest.sh` add to crontab
 - you can check crontab with `crontab -l`
 
+### Q&A section 
+
+
+**problem**: need to do conda init before you need to conda activate
+
+
+**solution**: `source ~/.bashrc`  → `conda init --all`
+
+
+---
+
+
+**problem**: conda (base) shows up on terminal prompt
+
+
+**solution**: `conda config --set auto_activate_base False`
+
+
+---
+
+
+**problem**: permissioned denied to some file
+
+
+**solution:** `chmod +x path/to/file` (chmod: command to change file permissions, +x: adds executable permission to file)
+
+
+---
+
+
+**problem:** editor isn’t nano
+
+
+**solution**: `export EDITOR=nano` (sets nano to default), for crontab→ `export VISUAL=nano`
+
+
+---
+
+
+**problem**: command not found
+
+
+**solution**: check shebang (character sequence at the beginning of a script that specifies the path to the interpreter that should execute the script) & **source the z shell** becaues cron jobs run in a much more limited environment compared to your interactive shell session, we need the .zshrc to be executed because it’s where we initialized conda 
+
+
 ### Extra information (thank you StackOverflow, Google, and chatGPT)
 
 - **what is z shell / bash shell?**
@@ -136,5 +145,3 @@ author:
 	│ └───────── hour (0 - 23)
 	└─────────── minute (0 - 59)
 	```
-
-
