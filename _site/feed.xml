@@ -1,4 +1,565 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-06-17T19:08:39-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Johanna’s blog</title><subtitle>A place where I document new discoveries in my computer science journey. (and a place where you can learn more about me!)</subtitle><author><name>Johanna</name><email>hl105@wellesley.edu</email></author><entry><title type="html">cron tutorial</title><link href="http://localhost:4000/project/cron-tutorial/" rel="alternate" type="text/html" title="cron tutorial" /><published>2024-06-17T00:00:00-04:00</published><updated>2024-06-17T17:58:35-04:00</updated><id>http://localhost:4000/project/cron-tutorial</id><content type="html" xml:base="http://localhost:4000/project/cron-tutorial/"><![CDATA[<h3 id="setting-up-cron">setting up cron</h3>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-07-10T20:46:44-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Johanna’s blog</title><subtitle>A place where I document new discoveries in my computer science journey. (and a place where you can learn more about me!)</subtitle><author><name>Johanna</name><email>hl105@wellesley.edu</email></author><entry><title type="html">test</title><link href="http://localhost:4000/r/test/" rel="alternate" type="text/html" title="test" /><published>2024-07-10T00:00:00-04:00</published><updated>2024-07-10T20:45:56-04:00</updated><id>http://localhost:4000/r/test</id><content type="html" xml:base="http://localhost:4000/r/test/"><![CDATA[<!--postNo: 2024-07-10-->]]></content><author><name>Johanna</name><email>hl105@wellesley.edu</email></author><category term="R" /><summary type="html"><![CDATA[test]]></summary></entry><entry><title type="html">f</title><link href="http://localhost:4000/r/f/" rel="alternate" type="text/html" title="f" /><published>2024-06-22T00:00:00-04:00</published><updated>2024-06-22T05:53:59-04:00</updated><id>http://localhost:4000/r/f</id><content type="html" xml:base="http://localhost:4000/r/f/"><![CDATA[<!--postNo: 2024-06-22-->
+
+<p>all notes and code from the QAI Program</p>
+
+<h3 id="robustness-and-power">Robustness and Power</h3>
+
+<ol>
+  <li>Robustness &amp; Distribution of p-values if null is true
+    <ul>
+      <li>def: method works out even if the assumptions aren’t true</li>
+      <li>If the null hypothesis of a test is true, what’s the probability that the p-value will be less than 0.05? → 0.05 duh</li>
+    </ul>
+  </li>
+  <li>p-values have a <strong>uniform distribution</strong> when the null hypothesis is true
+    <ul>
+      <li>better explanation: for a uniform distribution where the values fall between 0 and 1 - which is the case for the distribution of p-values when the null hypothesis is true - the probability of obtaining a number less than (or equal to) x is equal to x.</li>
+    </ul>
+  </li>
+  <li>Error types and independence
+    <ul>
+      <li><strong>Type 1 error</strong>: rejecting the null hypothesis when the null hypothesis is true</li>
+      <li><strong>Type 2 erro</strong>r: Failing to reject the null hypothesis when the null hypothesis is false</li>
+      <li>P<strong>ower</strong>: probability of rejecting the null hypothesis when a particular alternative hypothesis is true
+        <ol>
+          <li>What happens to t-tests when assumptions are false?</li>
+        </ol>
+        <ul>
+          <li>independece
+            <ol>
+              <li>subgroups of units similar to each other (cluster effect)</li>
+              <li>units vary over time (serial effect)</li>
+              <li>units vary across space (spatial effect)</li>
+              <li>standard error calculations incorrect; more advance calculation needed → need diff method</li>
+              <li>check: think carefully about hw data was collected; sometimes graphics can help</li>
+              <li>so t-tests are not robust to the independence assumption</li>
+            </ol>
+          </li>
+          <li>normality
+            <ol>
+              <li>similarity of shapes</li>
+              <li>sample sizes (relative and absolute)</li>
+              <li>outliers</li>
+            </ol>
+          </li>
+          <li>equality of variance
+            <ol>
+              <li>sample sizes (relative and absolute)
+    2. a procedure is <strong>robust</strong> to an assumption if it is valid when the assumption is not met
+    3. a procedure is <strong>resistant</strong> if it does not change when a small part of the data changes (e.g. outliers)</li>
+            </ol>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Normality
+    <ol>
+      <li></li>
+    </ol>
+
+    <div class="columns"><div class="column"><figure>
+                 <img src="../../assets/images/posts/Screenshot_2024-06-21_at_7.07.16_PM.png" alt="" />
+                 <figcaption></figcaption>
+             </figure></div><div class="column"><figure>
+                 <img src="../../assets/images/posts/Screenshot_2024-06-21_at_7.08.42_PM.png" alt="" />
+                 <figcaption></figcaption>
+             </figure></div></div>
+  </li>
+</ol>
+
+<ul>
+  <li>validity: robustness to normality assumption</li>
+  <li>t-tests fairly robust to departures from normality, especially in large samples</li>
+  <li>when the sample size are not equally, t-test more sensitive to skewedness and long-tailedness</li>
+  <li>for small samples, t-tests somewhat sensitive to markedly different skewedness in two groups</li>
+  <li>check: graphics (don’t need tests for normality!) → Q-Q plot straight?</li>
+  <li>when assumption violated: t-test usually still valid; or, use non-parametric test; or transform
+    <ol>
+      <li>Equal population variances</li>
+    </ol>
+
+    <div class="columns"><div class="column"><figure>
+                  <img src="../../assets/images/posts/Screenshot_2024-06-21_at_7.12.17_PM.png" alt="" />
+                  <figcaption></figcaption>
+              </figure></div><div class="column">- when sample sizes are equal, the pooled t-test is fairly robust to unequal variances- when sample sizes are unequal, the pooled t-test is typically not valid for unequal variances, the unpooled “welch” t-test  is a robust alternative- check: graphics (or, test such as Levene, but then have to make decision based on p-value cutoff) → boxplots- when assumption violated: pooled t-test, usually valid if sample sizes equal; or, unpooled t-test; or, transform</div></div>
+
+    <ul>
+      <li>t-tests sensitive to  outliers</li>
+      <li>rank-sum test resistant alternative</li>
+      <li>source of outliers:
+        <ul>
+          <li>measurement error</li>
+          <li>wrong population</li>
+          <li>heavy tail
+            <ol>
+              <li>Outliers</li>
+            </ol>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <div class="columns"><div class="column"><figure>
+                  <img src="../../assets/images/posts/Screenshot_2024-06-21_at_7.16.51_PM.png" alt="" />
+                  <figcaption></figcaption>
+              </figure></div><div class="column"><figure>
+                  <img src="../../assets/images/posts/Screenshot_2024-06-21_at_7.17.18_PM.png" alt="" />
+                  <figcaption></figcaption>
+              </figure></div></div>
+  </li>
+</ul>
+
+<ol>
+  <li>small sample size</li>
+</ol>
+
+<div class="columns"><div class="column"><figure>
+                <img src="../../assets/images/posts/Screenshot_2024-06-21_at_7.18.55_PM.png" alt="" />
+                <figcaption></figcaption>
+            </figure>small sample size → use permulation test</div><div class="column"><figure>
+                <img src="../../assets/images/posts/Screenshot_2024-06-21_at_7.19.11_PM.png" alt="" />
+                <figcaption></figcaption>
+            </figure>- permutation test just cares if the distributions look the same</div></div>
+
+<ol>
+  <li>Non-parametric tests
+    <ul>
+      <li>Why does the rank sum test lead to p-values less than 5% more than 5% of the time when the populations have equal means but different variances? → null hypothesis is false. The null hypothesis of a t-test is that the means are equal, but the null hypothesis of a non-parametric test like the rank sum is that the distributions are the same, not just the means.</li>
+    </ul>
+  </li>
+  <li>Power
+    <ul>
+      <li>probability of rejecting the null hypothesis when a specific alternative hypothesis is true</li>
+      <li>in general: power is tied to a specific alternative hypothesis and thus  you need to specify an alternative hypothesis in order to calculate power → The power is the probability that your test will correctly notice when the null is not true. You are much more likely to notice if the truth is very far from the null than if the truth is close to the null. For example, in a two-sample t-test, the null hypothesis is that the difference in population means is zero. Assume for a moment that the two populations both have variance 1, and consider two samples of size 100. If the true difference is not zero but 400 billion, you will certainly get a tiny p-value and correctly reject the null, right? But if the true difference is .0000001, you will definitely not end up with a data set that allows you to rule out the possibility that the true difference is zero.</li>
+      <li>tests are more powerful when sample sizes are larger</li>
+      <li>non-parametric test are somewhat less powerful than t-tests, when normality assumptions met bc knowing normality of distribution gives you more information</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="log-transformations-for-t-tests">Log transformations for t-tests</h3>
+
+<div class="columns"><div class="column">- Why use log transformations &amp; Interpreting a diff in mean logs on the original scale</div><div class="column"><figure>
+                <img src="../../assets/images/posts/Screenshot_2024-06-21_at_9.25.36_PM.png" alt="" />
+                <figcaption></figcaption>
+            </figure></div></div>
+
+<ol>
+  <li>how do I interpret original value from log?
+    <ul>
+      <li>$D = mean(log(x)) - mean(log(y)) \sim median(log(x)) - median(log(y)) = log(median(x)) - log(median(y)) = log(\frac{med(x)}{med(y)})$</li>
+      <li>$e^{log(\frac{med(x)}{med(y)}} = e^D$, so $\frac{med(x)}{med(y)} = e^D$</li>
+      <li>this is how we got from log scale D back to original scale medians</li>
+    </ul>
+  </li>
+  <li>Interpreting a confidence interval for the difference in mean logs, on the original scale
+    <ul>
+      <li>$P(LB &lt; mean(log(x)) - mean(log(y)) &lt; UB) = 0.95$</li>
+      <li>$P(e^{LB} &lt; \frac{med(x)}{med(y)} &lt; e^{UB}) = 0.95$</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="data-cleaning-and-management">Data Cleaning and Management</h3>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">getwd</span><span class="p">()</span><span class="w">
+</span><span class="n">setwd</span><span class="p">(</span><span class="s2">"Documents/"</span><span class="p">)</span><span class="w">
+
+</span><span class="n">install.packages</span><span class="p">(</span><span class="s2">"foreign"</span><span class="p">)</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="n">foreign</span><span class="p">)</span><span class="w">
+
+
+</span><span class="n">summary</span><span class="p">(</span><span class="n">brfss</span><span class="o">$</span><span class="n">BLDSUGAR</span><span class="p">)</span><span class="w">
+</span><span class="n">table</span><span class="p">(</span><span class="nf">is.na</span><span class="p">(</span><span class="n">brfss</span><span class="o">$</span><span class="n">BLDSUGAR</span><span class="p">))</span><span class="w"> 
+
+</span><span class="c1"># how to add new empty column</span><span class="w">
+</span><span class="n">brfss</span><span class="o">$</span><span class="n">timesperyr</span><span class="o">=</span><span class="nf">rep</span><span class="p">(</span><span class="kc">NA</span><span class="p">,</span><span class="w"> </span><span class="n">nrow</span><span class="p">(</span><span class="n">brfss</span><span class="p">))</span><span class="w">
+
+</span><span class="c1"># Set don't know and refused to NA</span><span class="w">
+</span><span class="n">brfss</span><span class="o">$</span><span class="n">timesperyr</span><span class="p">[</span><span class="n">brfss</span><span class="o">$</span><span class="n">BLDSUGAR</span><span class="o">==</span><span class="m">777</span><span class="p">]</span><span class="o">=</span><span class="kc">NA</span><span class="w">
+</span><span class="n">brfss</span><span class="o">$</span><span class="n">timesperyr</span><span class="p">[</span><span class="n">brfss</span><span class="o">$</span><span class="n">BLDSUGAR</span><span class="o">==</span><span class="m">999</span><span class="p">]</span><span class="o">=</span><span class="kc">NA</span><span class="w">
+
+</span><span class="n">brfss</span><span class="o">$</span><span class="n">DKorRefused</span><span class="o">&lt;-</span><span class="n">ifelse</span><span class="p">(</span><span class="n">brfss</span><span class="o">$</span><span class="n">BLDSUGAR</span><span class="o">==</span><span class="m">777</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">brfss</span><span class="o">$</span><span class="n">BLDSUGAR</span><span class="o">==</span><span class="m">999</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">0</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># If responded "never", set new variable to zero</span><span class="w">
+</span><span class="n">brfss</span><span class="o">$</span><span class="n">timesperyr</span><span class="p">[</span><span class="o">!</span><span class="nf">is.na</span><span class="p">(</span><span class="n">brfss</span><span class="o">$</span><span class="n">BLDSUGAR</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">brfss</span><span class="o">$</span><span class="n">BLDSUGAR</span><span class="o">==</span><span class="m">888</span><span class="p">]</span><span class="o">=</span><span class="m">0</span><span class="w">
+
+
+</span><span class="c1"># If number between 401 and 499, already in terms of times per year, but have to subtract 400</span><span class="w">
+</span><span class="n">brfss</span><span class="o">$</span><span class="n">timesperyr</span><span class="p">[</span><span class="o">!</span><span class="nf">is.na</span><span class="p">(</span><span class="n">brfss</span><span class="o">$</span><span class="n">BLDSUGAR</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;</span><span class="w">
+		 </span><span class="n">brfss</span><span class="o">$</span><span class="n">BLDSUGAR</span><span class="o">&gt;</span><span class="m">400</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">brfss</span><span class="o">$</span><span class="n">BLDSUGAR</span><span class="o">&lt;</span><span class="m">500</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="n">brfss</span><span class="o">$</span><span class="n">BLDSUGAR</span><span class="p">[</span><span class="o">!</span><span class="nf">is.na</span><span class="p">(</span><span class="n">brfss</span><span class="o">$</span><span class="n">BLDSUGAR</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> 
+						</span><span class="n">brfss</span><span class="o">$</span><span class="n">BLDSUGAR</span><span class="o">&gt;</span><span class="m">400</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">brfss</span><span class="o">$</span><span class="n">BLDSUGAR</span><span class="o">&lt;</span><span class="m">500</span><span class="p">]</span><span class="m">-400</span><span class="w">
+</span><span class="n">table</span><span class="p">(</span><span class="n">brfss</span><span class="o">$</span><span class="n">timesperyr</span><span class="p">)</span><span class="w">		
+
+
+</span><span class="c1"># Types of variables: numeric, character, factor, date,...</span><span class="w">
+</span><span class="nf">class</span><span class="p">(</span><span class="n">brfss</span><span class="o">$</span><span class="n">timesperyr</span><span class="p">)</span><span class="w">
+</span><span class="nf">is.numeric</span><span class="p">(</span><span class="n">brfss</span><span class="o">$</span><span class="n">timesperyr</span><span class="p">)</span><span class="w">
+</span><span class="nf">is.numeric</span><span class="p">(</span><span class="n">brfss</span><span class="o">$</span><span class="n">EmployClean</span><span class="p">)</span><span class="w">
+</span><span class="nf">class</span><span class="p">(</span><span class="n">brfss</span><span class="o">$</span><span class="n">EmployClean</span><span class="p">)</span><span class="w">
+</span><span class="nf">is.character</span><span class="p">(</span><span class="n">brfss</span><span class="o">$</span><span class="n">EmployClean</span><span class="p">)</span><span class="w">
+
+</span><span class="n">brfss</span><span class="o">$</span><span class="n">EmployCleanFactor</span><span class="o">=</span><span class="n">as.factor</span><span class="p">(</span><span class="n">brfss</span><span class="o">$</span><span class="n">EmployClean</span><span class="p">)</span><span class="w">
+</span><span class="n">is.factor</span><span class="p">(</span><span class="n">brfss</span><span class="o">$</span><span class="n">EmployCleanFactor</span><span class="p">)</span><span class="w">
+
+</span><span class="c1">#date object</span><span class="w">
+</span><span class="n">brfss</span><span class="o">$</span><span class="n">newdate</span><span class="o">&lt;-</span><span class="n">as.Date</span><span class="p">(</span><span class="n">brfss</span><span class="o">$</span><span class="n">IDATE</span><span class="p">,</span><span class="w"> </span><span class="s2">"%m%d%Y"</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># Multiple ways to create small data set containing only the variables you care about</span><span class="w">
+</span><span class="c1"># If the desired variables are part of the data set:</span><span class="w">
+</span><span class="n">subset</span><span class="o">&lt;-</span><span class="n">brfss</span><span class="p">[,</span><span class="nf">c</span><span class="p">(</span><span class="s2">"newdate"</span><span class="p">,</span><span class="s2">"timesperyr"</span><span class="p">,</span><span class="s2">"DKorRefused"</span><span class="p">,</span><span class="s2">"EmployCleanFactor"</span><span class="p">)]</span><span class="w">
+
+</span><span class="c1"># If the desired variables are not necessarily part of the data set, combine vectors as below</span><span class="w">
+</span><span class="c1"># For example, suppose I create a variable but don't include it in the data set</span><span class="w">
+</span><span class="n">TimesPerYrHigh</span><span class="o">&lt;-</span><span class="n">ifelse</span><span class="p">(</span><span class="n">brfss</span><span class="o">$</span><span class="n">timesperyr</span><span class="o">&gt;</span><span class="m">2000</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">0</span><span class="p">)</span><span class="w">
+</span><span class="n">subset</span><span class="o">&lt;-</span><span class="n">data.frame</span><span class="p">(</span><span class="n">TimesPerYrHigh</span><span class="p">,</span><span class="w"> </span><span class="n">brfss</span><span class="o">$</span><span class="n">timesperyr</span><span class="p">)</span><span class="w">
+</span><span class="c1"># to create a matrix, rather than a data set:</span><span class="w">
+</span><span class="n">subset</span><span class="o">&lt;-</span><span class="n">cbind</span><span class="p">(</span><span class="n">TimesPerYrHigh</span><span class="p">,</span><span class="w"> </span><span class="n">brfss</span><span class="o">$</span><span class="n">timesperyr</span><span class="p">)</span><span class="w">
+
+</span><span class="c1">#To write multiple variables to a spreadsheet, the variables need to be part of the same data frame or matrix object</span><span class="w">
+</span><span class="n">write.csv</span><span class="p">(</span><span class="n">subset</span><span class="p">,</span><span class="w"> </span><span class="n">file</span><span class="o">=</span><span class="n">paste</span><span class="p">(</span><span class="n">filepath</span><span class="p">,</span><span class="s2">"SubsetData.csv"</span><span class="p">,</span><span class="n">sep</span><span class="o">=</span><span class="s2">""</span><span class="p">))</span><span class="w">
+
+
+</span><span class="c1"># Other R Commands</span><span class="w">
+
+</span><span class="c1"># the "by" command does something to a variable, in groups based on another variable</span><span class="w">
+</span><span class="n">by</span><span class="p">(</span><span class="n">brfss</span><span class="o">$</span><span class="n">timesperyr</span><span class="p">,</span><span class="w"> </span><span class="n">brfss</span><span class="o">$</span><span class="n">EmployCleanFactor</span><span class="p">,</span><span class="w"> </span><span class="n">mean</span><span class="p">)</span><span class="w">
+ 
+
+</span><span class="c1"># the "merge" command combines multiple data sets with a variable in common.</span><span class="w">
+
+</span></code></pre></div></div>
+
+<p><em><strong>Factor variables</strong></em> are <em><strong>categorical variables</strong></em> that can be either numeric or string <em><strong>variables</strong></em>.</p>
+
+<p>Missing Data</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">tiny</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">read.csv</span><span class="p">(</span><span class="n">file</span><span class="o">=</span><span class="s2">"MissingData.csv"</span><span class="p">,</span><span class="w"> </span><span class="n">header</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span><span class="w">
+</span><span class="n">summary</span><span class="p">(</span><span class="n">tiny</span><span class="p">)</span><span class="w">
+</span><span class="nf">is.na</span><span class="p">(</span><span class="n">tiny</span><span class="p">)</span><span class="w">
+</span><span class="c1">#when there are values that R doesn't recognizes as missing</span><span class="w">
+</span><span class="n">editedtiny</span><span class="o">=</span><span class="n">read.csv</span><span class="p">(</span><span class="n">file</span><span class="o">=</span><span class="s2">"MissingData.csv"</span><span class="p">,</span><span class="w"> </span><span class="n">header</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">,</span><span class="w"> </span><span class="n">na.strings</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s2">"NaN"</span><span class="p">,</span><span class="w"> </span><span class="s2">"NA"</span><span class="p">,</span><span class="w"> </span><span class="s2">"N/A"</span><span class="p">,</span><span class="w"> </span><span class="s2">"-999"</span><span class="p">,</span><span class="w"> </span><span class="s2">""</span><span class="p">))</span><span class="w">
+
+</span></code></pre></div></div>
+
+<p>Dates</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Creates a combined birthday in Month Day Year format (combine multiple columns)</span><span class="w">
+</span><span class="n">combined</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">with</span><span class="p">(</span><span class="n">small</span><span class="p">,</span><span class="w"> </span><span class="n">paste</span><span class="p">(</span><span class="n">Month.of.Birth</span><span class="p">,</span><span class="w"> </span><span class="n">Day.of.Birth</span><span class="p">,</span><span class="w"> </span><span class="n">Year.of.Birth</span><span class="p">))</span><span class="w">
+</span><span class="n">small</span><span class="p">[</span><span class="s2">"Full.Birthday"</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">combined</span><span class="w">
+
+</span><span class="c1"># Creates a numerical birthday</span><span class="w">
+</span><span class="n">BirthdayNum</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">as.Date</span><span class="p">(</span><span class="n">small</span><span class="o">$</span><span class="s2">"Full.Birthday"</span><span class="p">,</span><span class="w"> </span><span class="n">format</span><span class="o">=</span><span class="s1">'%B %d %Y'</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># If you had the dates in a different format</span><span class="w">
+</span><span class="c1"># %d - day of the month (number)</span><span class="w">
+</span><span class="c1"># %m - month (number)</span><span class="w">
+</span><span class="c1"># %b - month (3 letter abbreviation)</span><span class="w">
+</span><span class="c1"># %B - month (full name)</span><span class="w">
+</span><span class="c1"># %y - year (2 digit)</span><span class="w">
+</span><span class="c1"># %Y - year (4 digit)</span><span class="w">
+
+</span><span class="c1"># Examples with different formats of the same date</span><span class="w">
+</span><span class="n">as.Date</span><span class="p">(</span><span class="s2">"Oct 15 14"</span><span class="p">,</span><span class="w"> </span><span class="n">format</span><span class="o">=</span><span class="s1">'%b %d %y'</span><span class="p">)</span><span class="w">
+</span><span class="n">as.Date</span><span class="p">(</span><span class="s2">"October 15th, 2014"</span><span class="p">,</span><span class="w"> </span><span class="n">format</span><span class="o">=</span><span class="s1">'%B %dth, %Y'</span><span class="p">)</span><span class="w">
+</span><span class="n">as.Date</span><span class="p">(</span><span class="s2">"10/15/14"</span><span class="p">,</span><span class="w"> </span><span class="n">format</span><span class="o">=</span><span class="s1">'%m/%d/%y'</span><span class="p">)</span><span class="w">
+</span><span class="n">as.Date</span><span class="p">(</span><span class="s2">"15/10/2014"</span><span class="p">,</span><span class="w"> </span><span class="n">format</span><span class="o">=</span><span class="s1">'%d/%m/%Y'</span><span class="p">)</span><span class="w">
+</span><span class="n">as.Date</span><span class="p">(</span><span class="s2">"10.15.14"</span><span class="p">,</span><span class="w"> </span><span class="n">format</span><span class="o">=</span><span class="s1">'%m.%d.%y'</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># Special note for months (and days) that are single digits</span><span class="w">
+</span><span class="n">as.Date</span><span class="p">(</span><span class="s2">"02012011"</span><span class="p">,</span><span class="w"> </span><span class="n">format</span><span class="o">=</span><span class="s1">'%m%d%Y'</span><span class="p">)</span><span class="w">
+</span><span class="n">as.Date</span><span class="p">(</span><span class="s2">"212011"</span><span class="p">,</span><span class="w"> </span><span class="n">format</span><span class="o">=</span><span class="s1">'%m%d%Y'</span><span class="p">)</span><span class="w">
+</span><span class="n">as.Date</span><span class="p">(</span><span class="s2">"2.1.2011"</span><span class="p">,</span><span class="w"> </span><span class="n">format</span><span class="o">=</span><span class="s1">'%m.%d.%Y'</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># R internally keeps track of dates as "days since 01/01/1970" with negative numbers for dates that occurred prior to 01/01/1970</span><span class="w">
+</span><span class="c1"># Can convert the output to this internal form</span><span class="w">
+</span><span class="nf">as.numeric</span><span class="p">(</span><span class="n">as.Date</span><span class="p">(</span><span class="s2">"2.1.1970"</span><span class="p">,</span><span class="w"> </span><span class="n">format</span><span class="o">=</span><span class="s1">'%m.%d.%Y'</span><span class="p">))</span><span class="w">
+
+</span><span class="c1"># Gets today's date in the same YYYY-MM-DD format as BirthdayNum</span><span class="w">
+</span><span class="n">today</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">Sys.Date</span><span class="p">()</span><span class="w">
+
+</span><span class="c1"># Package called lubridate is helpful when manipulating dates</span><span class="w">
+</span><span class="n">install.packages</span><span class="p">(</span><span class="s2">"lubridate"</span><span class="p">)</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="s2">"lubridate"</span><span class="p">)</span><span class="w">
+
+
+</span><span class="c1"># Can see what day of the week it is today</span><span class="w">
+</span><span class="n">wday</span><span class="p">(</span><span class="n">today</span><span class="p">,</span><span class="w"> </span><span class="n">label</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># Can see what day of the week people were born on</span><span class="w">
+</span><span class="n">weekdayOfBirth</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">wday</span><span class="p">(</span><span class="n">BirthdayNum</span><span class="p">,</span><span class="w"> </span><span class="n">label</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># Create an interval between 2 dates</span><span class="w">
+</span><span class="n">int</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">interval</span><span class="p">(</span><span class="n">BirthdayNum</span><span class="p">,</span><span class="w"> </span><span class="n">today</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># Converts the interval into a period (age in years, months, days, hours, minutes, and seconds)</span><span class="w">
+</span><span class="n">wholeAge</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">as.period</span><span class="p">(</span><span class="n">int</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># Obtain the years of age from the whole age</span><span class="w">
+</span><span class="n">ageYears</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">wholeAge</span><span class="o">$</span><span class="n">year</span><span class="w">
+
+</span><span class="c1"># Adds the whole age birthday to the data frame</span><span class="w">
+</span><span class="n">small</span><span class="p">[</span><span class="s2">"Age"</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">ageYears</span><span class="w">
+
+</span><span class="c1"># Can see the difference in the way that birthdays and ages are stored when they are plotted</span><span class="w">
+</span><span class="n">par</span><span class="p">(</span><span class="n">las</span><span class="o">=</span><span class="m">1</span><span class="p">)</span><span class="w">
+</span><span class="n">plot</span><span class="p">(</span><span class="n">BirthdayNum</span><span class="p">,</span><span class="w"> </span><span class="n">ageYears</span><span class="p">,</span><span class="w">
+	</span><span class="n">xlab</span><span class="o">=</span><span class="s2">"Calendar Birthday"</span><span class="p">,</span><span class="w">
+	</span><span class="n">ylab</span><span class="o">=</span><span class="s2">"Age in Years"</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<h3 id="reshaping-and-manipulating-data-tidyverse">Reshaping and Manipulating Data (Tidyverse)</h3>
+
+<ol>
+  <li>Introduction to Dplyr</li>
+</ol>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#Tibbles are data frames in R with unique printing and subsetting defaults, which are useful when working with large datasets. </span><span class="w">
+</span><span class="n">health</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">as_tibble</span><span class="p">(</span><span class="n">ad_health</span><span class="p">)</span><span class="w">
+</span><span class="nf">names</span><span class="p">(</span><span class="n">health</span><span class="p">)</span><span class="w">
+</span><span class="nf">names</span><span class="p">(</span><span class="n">health</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"ISO"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Location"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Year"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Source"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Indicator"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Age"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Value"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Description"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Reference Period"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Notes"</span><span class="p">)</span><span class="w">
+</span><span class="n">summary</span><span class="p">(</span><span class="n">health</span><span class="p">)</span><span class="w"> 
+
+</span><span class="c1">#Dplyr is a helpful data manipulation package with five main functions: filter, select, arrange, mutate, and summarise </span><span class="w">
+
+</span><span class="c1"># 1.) Filter  </span><span class="w">
+</span><span class="c1"># Filter is used to view a particular subset of the data </span><span class="w">
+
+</span><span class="c1"># Example: </span><span class="w">
+</span><span class="c1"># View the percentage of women, between the ages of 18 to 19 years old, in Albania who received antenatal care </span><span class="w">
+
+</span><span class="c1"># Original R </span><span class="w">
+</span><span class="n">health</span><span class="p">[</span><span class="n">health</span><span class="o">$</span><span class="n">Age</span><span class="o">==</span><span class="s2">"18-19 yrs"</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">health</span><span class="o">$</span><span class="n">Location</span><span class="o">==</span><span class="s2">"Albania"</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">health</span><span class="o">$</span><span class="n">Indicator</span><span class="w"> </span><span class="o">==</span><span class="s2">"ANC_1T"</span><span class="w">  </span><span class="o">|</span><span class="n">health</span><span class="o">$</span><span class="n">Age</span><span class="o">==</span><span class="s2">"18-19 yrs"</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">health</span><span class="o">$</span><span class="n">Location</span><span class="o">==</span><span class="s2">"Albania"</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">health</span><span class="o">$</span><span class="n">Indicator</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">"ANC1"</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">health</span><span class="o">$</span><span class="n">Age</span><span class="o">==</span><span class="s2">"18-19 yrs"</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">health</span><span class="o">$</span><span class="n">Location</span><span class="o">==</span><span class="s2">"Albania"</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">health</span><span class="o">$</span><span class="n">Indicator</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">"ANC4"</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">health</span><span class="o">$</span><span class="n">Age</span><span class="o">==</span><span class="s2">"18-19 yrs"</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">health</span><span class="o">$</span><span class="n">Location</span><span class="o">==</span><span class="s2">"Albania"</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">health</span><span class="o">$</span><span class="n">Indicator</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">"ANC8"</span><span class="p">,</span><span class="w"> </span><span class="p">]</span><span class="w">
+
+</span><span class="c1"># Dplyr   </span><span class="w">
+</span><span class="n">health</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="c1">#read as "then"</span><span class="w">
+		</span><span class="n">filter</span><span class="p">(</span><span class="n">Age</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">"18-19 yrs"</span><span class="p">,</span><span class="w"> </span><span class="n">Location</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">"Albania"</span><span class="p">,</span><span class="w"> </span><span class="n">Indicator</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">"ANC_1T"</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Indicator</span><span class="o">==</span><span class="s2">"ANC1"</span><span class="w"> </span><span class="o">|</span><span class="w"> 	</span><span class="n">Indicator</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">"ANC4"</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Indicator</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">"ANC8"</span><span class="p">)</span><span class="w">
+</span><span class="c1"># does not replace original df, assign to new var</span><span class="w">
+
+
+
+</span><span class="c1"># 2.) Select </span><span class="w">
+</span><span class="c1"># Select allows you to view only columns of interest in a dataset </span><span class="w">
+
+</span><span class="c1"># Example: </span><span class="w">
+</span><span class="c1"># View only the location, indicator, and year columns of the health dataset </span><span class="w">
+
+</span><span class="c1"># Original R </span><span class="w">
+</span><span class="n">health</span><span class="p">[,</span><span class="nf">c</span><span class="p">(</span><span class="s2">"Location"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Year"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Indicator"</span><span class="p">)]</span><span class="w">
+
+</span><span class="c1"># Dplyr </span><span class="w">
+</span><span class="n">health</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> 
+		</span><span class="n">select</span><span class="p">(</span><span class="n">Location</span><span class="p">,</span><span class="w"> </span><span class="n">Year</span><span class="p">,</span><span class="w"> </span><span class="n">Indicator</span><span class="p">)</span><span class="w">
+ 
+</span><span class="c1">#More functionality with "select" in Dplyr </span><span class="w">
+</span><span class="c1"># a.) Select allows you to view columns in a sequence </span><span class="w">
+
+</span><span class="c1"># Example: </span><span class="w">
+</span><span class="c1"># View all of the columns between Location and Value in the health dataset, except the one named Source </span><span class="w">
+</span><span class="n">health</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> 
+		</span><span class="n">select</span><span class="p">(</span><span class="n">Location</span><span class="o">:</span><span class="n">Value</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> 
+		</span><span class="n">select</span><span class="p">(</span><span class="o">-</span><span class="n">Source</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># b.) Select also allows you to view columns with a specific word in the title </span><span class="w">
+</span><span class="n">health</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> 
+		</span><span class="n">select</span><span class="p">(</span><span class="n">contains</span><span class="p">(</span><span class="s2">"Indicator"</span><span class="p">))</span><span class="w">		
+		
+</span><span class="c1"># Example: Combining Filter &amp; Select </span><span class="w">
+</span><span class="c1"># View only locations where the percentage of females who use contraceptives is greater than 20 </span><span class="w">
+
+</span><span class="c1"># Original R </span><span class="w">
+</span><span class="n">health</span><span class="p">[</span><span class="n">health</span><span class="o">$</span><span class="n">Indicator</span><span class="o">==</span><span class="s2">"CPMODHS"</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">health</span><span class="o">$</span><span class="n">Value</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">20</span><span class="p">,</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"Location"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Year"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Indicator"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Value"</span><span class="p">)]</span><span class="w">
+
+</span><span class="c1"># Dplyr </span><span class="w">
+</span><span class="n">health</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> 
+	</span><span class="n">select</span><span class="p">(</span><span class="n">Location</span><span class="p">,</span><span class="w"> </span><span class="n">Year</span><span class="p">,</span><span class="w"> </span><span class="n">Indicator</span><span class="p">,</span><span class="w"> </span><span class="n">Value</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> 
+	</span><span class="n">filter</span><span class="p">(</span><span class="n">Indicator</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">"CPMODHS"</span><span class="p">,</span><span class="w"> </span><span class="n">Value</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">20</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<ol>
+  <li>Introduction to TidyR</li>
+</ol>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#TidyR is a helpful data reshaping package with four main functions: spread , gather, unite, and separate </span><span class="w">
+
+</span><span class="c1"># 1.) Spread </span><span class="w">
+</span><span class="c1"># Spread is a useful function for widening long data. Spread is used to convert two columns into multiple columns. The spread function is formatted as so: </span><span class="w">
+</span><span class="c1"># spread(data, key, value) where key is defined as the column whose values will be used as the column headings and value as the values you wish to populate the new cells. </span><span class="w">
+</span><span class="c1">#h_spread &lt;- health %&gt;% spread(Indicator, Value)</span><span class="w">
+</span><span class="c1"># A very common error while using spread is: "Each row of output must be identified by a unique combination of keys". If this error appears, we must first group the dataset by our key as in the following example. </span><span class="w">
+
+</span><span class="c1">#Example: </span><span class="w">
+</span><span class="c1"># Create new columns based on each indicator variable. Our key column will be "Indicator" and our value column will be "Value". </span><span class="w">
+</span><span class="c1"># Firstly, create a subset of the data that only includes the columns of Location, Year, Indicator, and Value </span><span class="w">
+
+</span><span class="n">sub_health</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">health</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> 
+		</span><span class="n">select</span><span class="p">(</span><span class="n">Location</span><span class="p">,</span><span class="w"> </span><span class="n">Year</span><span class="p">,</span><span class="w"> </span><span class="n">Indicator</span><span class="p">,</span><span class="w"> </span><span class="n">Value</span><span class="p">)</span><span class="w">
+
+</span><span class="n">h</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">sub_health</span><span class="o">%&gt;%</span><span class="w"> 
+	</span><span class="n">group_by</span><span class="p">(</span><span class="n">Indicator</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> 
+	</span><span class="n">mutate</span><span class="p">(</span><span class="n">grouped_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">row_number</span><span class="p">())</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">  </span><span class="c1"># create new variable called grouped_id</span><span class="w">
+	</span><span class="n">spread</span><span class="p">(</span><span class="n">Indicator</span><span class="p">,</span><span class="w"> </span><span class="n">Value</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> 
+	</span><span class="n">select</span><span class="p">(</span><span class="o">-</span><span class="n">grouped_id</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># Next, rename the columns 	</span><span class="w">
+</span><span class="nf">names</span><span class="p">(</span><span class="n">h</span><span class="p">)</span><span class="w">		
+</span><span class="nf">names</span><span class="p">(</span><span class="n">h</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"Location"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Year"</span><span class="p">,</span><span class="s2">"First Ante.Vis."</span><span class="p">,</span><span class="w"> </span><span class="s2">"Blood"</span><span class="p">,</span><span class="w"> </span><span class="s2">"BP"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Urine"</span><span class="p">,</span><span class="w"> </span><span class="s2">"1 &lt; Ante.Vis."</span><span class="p">,</span><span class="w"> </span><span class="s2">"4 &lt; Ante.Vis."</span><span class="p">,</span><span class="w"> </span><span class="s2">"8 &lt; Ante.Vis."</span><span class="p">,</span><span class="w"> </span><span class="s2">"Disease.Care"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Diarrhoea"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Fever"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Pneumonia"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Contraceptive"</span><span class="p">,</span><span class="w"> </span><span class="s2">"C.Section"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Family.Plan"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Institutional.Delivery"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Malaria.Treat"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Net.Children"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Net.Women"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Malaria.Test"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Salts"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Salts&amp;Zinc"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Post.Care.Baby"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Post.Care.Mom"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Delivery.Attendent.Inst."</span><span class="p">,</span><span class="w"> </span><span class="s2">"Delivery.Attendent"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Tobacco"</span><span class="p">)</span><span class="w">
+</span><span class="nf">names</span><span class="p">(</span><span class="n">h</span><span class="p">)</span><span class="w">
+</span><span class="nf">dim</span><span class="p">(</span><span class="n">h</span><span class="p">)</span><span class="w">
+</span><span class="n">print</span><span class="p">(</span><span class="n">as_tibble</span><span class="p">(</span><span class="n">h</span><span class="p">),</span><span class="w"> </span><span class="n">n</span><span class="o">=</span><span class="m">30</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># 2.) Gather </span><span class="w">
+</span><span class="c1"># Gather is a useful function for elongating wide data. </span><span class="w">
+
+</span><span class="c1">#Example: </span><span class="w">
+</span><span class="c1"># Merge the columns that contain information regarding a woman seeking care for a specific disease. This includes columns Diarrhoea through Pneumonia </span><span class="w">
+</span><span class="n">health_Dis</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">h</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> 
+	</span><span class="n">group_by</span><span class="p">(</span><span class="n">Location</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> 
+	</span><span class="n">select</span><span class="p">(</span><span class="n">Location</span><span class="p">,</span><span class="w"> </span><span class="n">Diarrhoea</span><span class="o">:</span><span class="n">Pneumonia</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> 
+	</span><span class="n">gather</span><span class="p">(</span><span class="n">Disease</span><span class="p">,</span><span class="w"> </span><span class="n">Val</span><span class="p">,</span><span class="w"> </span><span class="n">Diarrhoea</span><span class="o">:</span><span class="n">Pneumonia</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="c1">#gather diarrhoe:pneumonia into disease, val col</span><span class="w">
+	</span><span class="n">print</span><span class="p">(</span><span class="w"> </span><span class="n">n</span><span class="o">=</span><span class="m">50</span><span class="p">)</span><span class="w">
+	
+	
+
+</span><span class="c1"># 3.) Unite </span><span class="w">
+</span><span class="c1"># Unite allows you to paste together multiple columns into one </span><span class="w">
+
+</span><span class="c1"># Example: </span><span class="w">
+</span><span class="c1"># Paste together the columns that contain information regarding the study location, which includes columns "ISO" and "Location" in the health dataset </span><span class="w">
+</span><span class="n">health_Un</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">health</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> 
+				</span><span class="n">unite</span><span class="p">(</span><span class="n">Loc.</span><span class="p">,</span><span class="w"> </span><span class="n">ISO</span><span class="p">,</span><span class="w"> </span><span class="n">Location</span><span class="p">,</span><span class="w"> </span><span class="n">sep</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">","</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> 
+				</span><span class="n">print</span><span class="p">(</span><span class="w"> </span><span class="n">n</span><span class="o">=</span><span class="m">30</span><span class="p">)</span><span class="w">				
+						
+</span><span class="c1"># 4.) Separate </span><span class="w">
+</span><span class="c1"># Separate allows you to turn a single character column into multiple columns </span><span class="w">
+
+</span><span class="c1"># Example: </span><span class="w">
+</span><span class="c1"># Revert the Loc. column from the previous example back to separate columns for ISO, ie. country/area abbreviations, and location name				</span><span class="w">
+</span><span class="n">health_Sep</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">health_Un</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> 
+				</span><span class="n">separate</span><span class="p">(</span><span class="n">Loc.</span><span class="p">,</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"ISO"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Location"</span><span class="p">),</span><span class="w"> </span><span class="n">sep</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">","</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> 
+				</span><span class="n">print</span><span class="p">(</span><span class="w"> </span><span class="n">n</span><span class="o">=</span><span class="m">30</span><span class="p">)</span><span class="w">
+
+</span></code></pre></div></div>
+
+<p>using Dplyr with our Cleaned Dataset</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Now that we have created new variables for each indicator, we can more easily view important sections of our dataset</span><span class="w">
+
+</span><span class="c1"># 1.) Filter </span><span class="w">
+
+</span><span class="c1">#Example:</span><span class="w">
+</span><span class="c1"># View the locations surveyed in 2015 who reported more than 10% of women being tested for malaria </span><span class="w">
+
+</span><span class="n">h</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> 
+		</span><span class="n">filter</span><span class="p">(</span><span class="n">Year</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">"2015"</span><span class="p">,</span><span class="w"> </span><span class="n">Malaria.Test</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">10</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># 2.) Select </span><span class="w">
+</span><span class="c1"># View only the location, year, and tobacco use </span><span class="w">
+
+</span><span class="n">h</span><span class="o">%&gt;%</span><span class="w"> 
+	</span><span class="n">select</span><span class="p">(</span><span class="n">Location</span><span class="p">,</span><span class="w"> </span><span class="n">Year</span><span class="p">,</span><span class="w"> </span><span class="n">Tobacco</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># Example: Combining Filter &amp; Select </span><span class="w">
+</span><span class="c1"># View only locations where the percentage of females who use contraceptives is greater than 20 </span><span class="w">
+	
+</span><span class="n">h</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> 
+	</span><span class="n">select</span><span class="p">(</span><span class="n">Location</span><span class="p">,</span><span class="w"> </span><span class="n">Year</span><span class="p">,</span><span class="w"> </span><span class="n">Contraceptive</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+	</span><span class="n">filter</span><span class="p">(</span><span class="n">Contraceptive</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">20</span><span class="p">)</span><span class="w">	
+
+</span><span class="c1"># OR </span><span class="w">
+
+</span><span class="n">h</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> 
+	</span><span class="n">filter</span><span class="p">(</span><span class="n">Contraceptive</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">20</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> 
+	</span><span class="n">select</span><span class="p">(</span><span class="n">Location</span><span class="p">,</span><span class="w"> </span><span class="n">Year</span><span class="p">,</span><span class="w"> </span><span class="n">Contraceptive</span><span class="w"> </span><span class="p">)</span><span class="w">	
+
+</span><span class="c1"># 3.) Arrange </span><span class="w">
+
+</span><span class="c1"># Example:</span><span class="w">
+</span><span class="c1"># Sort location by the percentage of women who gave birth in an institution. Sort this from lowest to highest percentage of women.  </span><span class="w">
+
+</span><span class="n">h</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> 
+	</span><span class="n">select</span><span class="p">(</span><span class="n">Location</span><span class="p">,</span><span class="w"> </span><span class="n">Year</span><span class="p">,</span><span class="w"> </span><span class="n">Institutional.Delivery</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> 
+	</span><span class="n">arrange</span><span class="p">(</span><span class="n">Institutional.Delivery</span><span class="p">)</span><span class="w">	
+
+</span><span class="c1"># OR </span><span class="w">
+
+</span><span class="n">h</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> 
+	</span><span class="n">arrange</span><span class="p">(</span><span class="n">Institutional.Delivery</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> 
+	</span><span class="n">select</span><span class="p">(</span><span class="n">Location</span><span class="p">,</span><span class="w"> </span><span class="n">Year</span><span class="p">,</span><span class="w"> </span><span class="n">Institutional.Delivery</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># Example: </span><span class="w">
+</span><span class="c1"># Sort location by the percentage of women who had a skilled attendant for her institutional delivery. Sort this from highest to lowest percentage of women.</span><span class="w">
+ 
+</span><span class="n">h</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> 
+ 	</span><span class="n">select</span><span class="p">(</span><span class="n">Location</span><span class="p">,</span><span class="w"> </span><span class="n">Year</span><span class="p">,</span><span class="w"> </span><span class="n">Delivery.Attendent.Inst.</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> 
+ 	</span><span class="n">arrange</span><span class="p">(</span><span class="n">desc</span><span class="p">(</span><span class="n">Delivery.Attendent.Inst.</span><span class="p">))</span><span class="w">
+
+</span><span class="c1"># 4.) Mutate </span><span class="w">
+</span><span class="c1"># Mutate allows you to add new variables to a dataset </span><span class="w">
+
+</span><span class="c1"># Example: </span><span class="w">
+</span><span class="c1"># Create a new variable that shows a ratio of the percentage of children who used mosquito nets to the percentage of women who used mosquito nets </span><span class="w">
+
+</span><span class="c1"># Original R </span><span class="w">
+</span><span class="n">h_rat</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">h</span><span class="p">[,]</span><span class="w">
+</span><span class="n">h_rat</span><span class="o">$</span><span class="n">Ratio</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">h</span><span class="o">$</span><span class="n">Net.Children</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">h</span><span class="o">$</span><span class="n">Net.Women</span><span class="w"> 
+</span><span class="n">h_rat</span><span class="p">[,</span><span class="nf">c</span><span class="p">(</span><span class="s2">"Location"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Net.Women"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Net.Children"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Ratio"</span><span class="p">)]</span><span class="w"> 
+
+</span><span class="c1"># Dplyr </span><span class="w">
+</span><span class="n">h</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+	</span><span class="n">select</span><span class="p">(</span><span class="n">Location</span><span class="p">,</span><span class="w"> </span><span class="n">Net.Women</span><span class="p">,</span><span class="w"> </span><span class="n">Net.Children</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> 
+	</span><span class="n">mutate</span><span class="p">(</span><span class="n">Ratio</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Net.Children</span><span class="o">/</span><span class="n">Net.Women</span><span class="p">)</span><span class="w"> 	
+
+</span><span class="c1"># Note, the order of operations matters when using the verb mutate. Notice, the variable "Ratio" would not print in this scenario. </span><span class="w">
+	
+</span><span class="n">h</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+	</span><span class="n">mutate</span><span class="p">(</span><span class="n">Ratio</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Net.Children</span><span class="o">/</span><span class="n">Net.Women</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+	</span><span class="n">select</span><span class="p">(</span><span class="n">Location</span><span class="p">,</span><span class="w"> </span><span class="n">Net.Women</span><span class="p">,</span><span class="w"> </span><span class="n">Net.Children</span><span class="p">)</span><span class="w"> 
+	
+
+</span><span class="c1"># 5.) Summarise  </span><span class="w">
+</span><span class="c1"># Summarise allows you to compute a summary statistic, such as mean, for each group in a dataset </span><span class="w">
+
+</span><span class="c1"># Example: </span><span class="w">
+</span><span class="c1"># Compute the average percent of women surveyed in each location who use tobacco </span><span class="w">
+
+</span><span class="c1"># Original R </span><span class="w">
+</span><span class="n">h_sum</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">h</span><span class="p">[,]</span><span class="w">
+</span><span class="n">head</span><span class="p">(</span><span class="n">with</span><span class="p">(</span><span class="n">h_sum</span><span class="p">,</span><span class="w"> </span><span class="n">tapply</span><span class="p">(</span><span class="n">Tobacco</span><span class="p">,</span><span class="w"> </span><span class="n">Location</span><span class="p">,</span><span class="w"> </span><span class="n">mean</span><span class="p">,</span><span class="w"> </span><span class="n">na.rm</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)))</span><span class="w">
+</span><span class="n">head</span><span class="p">(</span><span class="n">aggregate</span><span class="p">(</span><span class="n">Tobacco</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">Location</span><span class="p">,</span><span class="w"> </span><span class="n">h_sum</span><span class="p">,</span><span class="w"> </span><span class="n">mean</span><span class="p">),</span><span class="w"> </span><span class="n">n</span><span class="o">=</span><span class="m">4</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># Dplyr </span><span class="w">
+</span><span class="n">h</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> 
+	</span><span class="n">group_by</span><span class="p">(</span><span class="n">Location</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> 
+	</span><span class="n">summarise</span><span class="p">(</span><span class="n">avg_tob</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mean</span><span class="p">(</span><span class="n">Tobacco</span><span class="p">,</span><span class="w"> </span><span class="n">na.rm</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">))</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> 
+	</span><span class="n">print</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="m">4</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># Note, the order of operations matters when using the verb summarise. Notice, the variable "Location" would not exist in the code below. In this case, we would be calculating a single mean value for the percentage of women surveyed who use tobacco. </span><span class="w">
+
+</span><span class="n">h</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> 
+	</span><span class="n">summarise</span><span class="p">(</span><span class="n">avg_tob</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mean</span><span class="p">(</span><span class="n">Tobacco</span><span class="p">,</span><span class="w"> </span><span class="n">na.rm</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">))</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> 
+ 	</span><span class="n">group_by</span><span class="p">(</span><span class="n">Location</span><span class="p">)</span><span class="w">  
+
+</span><span class="c1"># 6.) Group By </span><span class="w">
+</span><span class="c1"># Group by allows you to perform operations on data that are grouped based on a certain variable </span><span class="w">
+
+</span><span class="c1"># Example: </span><span class="w">
+</span><span class="c1"># Compute the average percent of women surveyed in each location who use tobacco </span><span class="w">
+</span><span class="n">h</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> 
+	</span><span class="n">group_by</span><span class="p">(</span><span class="n">Location</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> 
+	</span><span class="n">summarise</span><span class="p">(</span><span class="n">avg_tob</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mean</span><span class="p">(</span><span class="n">Tobacco</span><span class="p">,</span><span class="w"> </span><span class="n">na.rm</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">))</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> 
+	</span><span class="n">print</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="m">4</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">hnew</span><span class="o">&lt;-</span><span class="n">h</span><span class="o">%&gt;%</span><span class="w">
+  </span><span class="n">mutate</span><span class="p">(</span><span class="n">across</span><span class="p">(</span><span class="n">everything</span><span class="p">(),</span><span class="w"> </span><span class="o">~</span><span class="n">replace</span><span class="p">(</span><span class="n">.</span><span class="p">,</span><span class="w"> </span><span class="nf">is.na</span><span class="p">(</span><span class="n">.</span><span class="p">),</span><span class="m">0</span><span class="p">)))</span><span class="w">
+</span><span class="n">tail</span><span class="p">(</span><span class="n">hnew</span><span class="p">)</span><span class="w">
+
+
+</span><span class="n">CPS</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+  </span><span class="n">summarise</span><span class="p">(</span><span class="n">across</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="n">wage</span><span class="p">,</span><span class="w"> </span><span class="n">educ</span><span class="p">,</span><span class="w"> </span><span class="n">exper</span><span class="p">,</span><span class="w"> </span><span class="n">age</span><span class="p">),</span><span class="w"> </span><span class="n">mean</span><span class="p">))</span><span class="w">
+</span></code></pre></div></div>]]></content><author><name>Johanna</name><email>hl105@wellesley.edu</email></author><category term="R" /><summary type="html"><![CDATA[3]]></summary></entry><entry><title type="html">cron tutorial</title><link href="http://localhost:4000/project/cron-tutorial/" rel="alternate" type="text/html" title="cron tutorial" /><published>2024-06-17T00:00:00-04:00</published><updated>2024-06-17T17:58:35-04:00</updated><id>http://localhost:4000/project/cron-tutorial</id><content type="html" xml:base="http://localhost:4000/project/cron-tutorial/"><![CDATA[<h3 id="setting-up-cron">setting up cron</h3>
 
 <ul>
   <li>create scripts folder <code class="language-plaintext highlighter-rouge">mkdir scripts</code></li>

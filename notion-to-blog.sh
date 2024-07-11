@@ -80,7 +80,8 @@ $updated_content" > "$output_path"
     echo "$output_path was successfully updated!"
     
     git status
-    git add "$output_path" || echo "Failed to add files to Git"
+    git add .
+    #git add "$output_path" || echo "Failed to add files to Git"
     git commit -m "Updated blog post: $title" || echo "Failed to commit to Git"
     git push || echo "Failed to push to Git"
 fi #end of if block

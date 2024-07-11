@@ -162,3 +162,11 @@ img:hover, img:focus {
         max-width: 50%; /* Reduce the max-width for image-text on small devices */
     }
 }
+
+.columns {
+    display: flex;
+  }
+.column {
+    flex: 1;
+    padding: 10px;
+}
