@@ -1,12 +1,12 @@
 ---
 
-title: "test"
-excerpt: "test"
-date: 2024-07-10
-lastmod: 2024-07-10 20:45:56 -0400
-last_modified_at: 2024-07-10 20:45:56 -0400
+title: "[QAI] Power, Data Cleaning and Management (Dplyr, tidyR) (week 3)"
+excerpt: "notes from week 3"
+date: 2024-06-20
+lastmod: 2024-07-30 22:34:55 -0400
+last_modified_at: 2024-07-30 22:34:55 -0400
 categories: R
-tags: 
+tags: qai statistics R Dplyr, tidyR, robustness, power
 classes:
 toc: true
 toc_label:
@@ -21,18 +21,46 @@ sitemap:
 author:
 ---
 
+<!--postNo: 2024-07-30-->
+
+
 all notes and code from the QAI Program
 
 
 ### Robustness and Power
 
-<li>Robustness & Distribution of p-values if null is true</li>
-<li>p-values have a uniform distribution when the null hypothesis is true</li>
-<li>Error types and independence</li>
-<li>Normality</li>
+1. Robustness & Distribution of p-values if null is true
+	- def: method works out even if the assumptions aren’t true
+	- If the null hypothesis of a test is true, what's the probability that the p-value will be less than 0.05? → 0.05 duh
+2. p-values have a **uniform distribution** when the null hypothesis is true
+	- better explanation: for a uniform distribution where the values fall between 0 and 1 - which is the case for the distribution of p-values when the null hypothesis is true - the probability of obtaining a number less than (or equal to) x is equal to x.
+3. Error types and independence
+	- **Type 1 error**: rejecting the null hypothesis when the null hypothesis is true
+	- **Type 2 erro**r: Failing to reject the null hypothesis when the null hypothesis is false
+	- P**ower**: probability of rejecting the null hypothesis when a particular alternative hypothesis is true
+	1. What happens to t-tests when assumptions are false?
+		- independece
+			1. subgroups of units similar to each other (cluster effect)
+			2. units vary over time (serial effect)
+			3. units vary across space (spatial effect)
+			4. standard error calculations incorrect; more advance calculation needed → need diff method
+			5. check: think carefully about hw data was collected; sometimes graphics can help
+			6. so t-tests are not robust to the independence assumption
+		- normality
+			1. similarity of shapes
+			2. sample sizes (relative and absolute)
+			3. outliers
+		- equality of variance
+			1. sample sizes (relative and absolute)
+	2. a procedure is **robust** to an assumption if it is valid when the assumption is not met
+	3. a procedure is **resistant** if it does not change when a small part of the data changes (e.g. outliers)
+4. Normality
 - 
 
-	![](https://res.cloudinary.com/df2rp6zoo/image/upload/v1720658822/ifgxgzjhbpuntpmscjqq.png)
+	<figure>
+	                      <img src="https://res.cloudinary.com/df2rp6zoo/image/upload/v1722393303/telrmin5whpgxsrec3hs.png" alt="">
+	                      <figcaption></figcaption>
+	                  </figure>
 
 - validity: robustness to normality assumption
 - t-tests fairly robust to departures from normality, especially in large samples
@@ -40,22 +68,80 @@ all notes and code from the QAI Program
 - for small samples, t-tests somewhat sensitive to markedly different skewedness in two groups
 - check: graphics (don’t need tests for normality!) → Q-Q plot straight?
 - when assumption violated: t-test usually still valid; or, use non-parametric test; or transform
-<li>Equal population variances</li>
-<li>Outliers</li>
-<li>small sample size</li>
+1. Equal population variances
 
-<div class="columns"><div class="column">![](https://res.cloudinary.com/df2rp6zoo/image/upload/v1720658826/ez8bsoyyysowytxnxhxc.png)small sample size → use permulation test</div><div class="column">![](https://res.cloudinary.com/df2rp6zoo/image/upload/v1720658825/rbkswtuvhjqqxfznjmfx.png)<li>permutation test just cares if the distributions look the same </li></div></div>
+<figure>
+                      <img src="https://res.cloudinary.com/df2rp6zoo/image/upload/v1722393304/j8yenfw0je8kavzsoxp5.png" alt="">
+                      <figcaption></figcaption>
+                  </figure>
 
-<li>Non-parametric tests</li>
-<li>Power</li>
+- when sample sizes are equal, the pooled t-test is fairly robust to unequal variances
+- when sample sizes are unequal, the pooled t-test is typically not valid for unequal variances, the unpooled “welch” t-test  is a robust alternative
+- check: graphics (or, test such as Levene, but then have to make decision based on p-value cutoff) → boxplots
+- when assumption violated: pooled t-test, usually valid if sample sizes equal; or, unpooled t-test; or, transform
+	- t-tests sensitive to  outliers
+	- rank-sum test resistant alternative
+	- source of outliers:
+		- measurement error
+		- wrong population
+		- heavy tail
+2. Outliers
+
+<figure>
+                      <img src="https://res.cloudinary.com/df2rp6zoo/image/upload/v1722393308/bl1ckmqx2yqpd0nzy5ce.png" alt="">
+                      <figcaption></figcaption>
+                  </figure>
+
+
+<figure>
+                      <img src="https://res.cloudinary.com/df2rp6zoo/image/upload/v1722393310/zkcmjihpzzt4jxmqiur5.png" alt="">
+                      <figcaption></figcaption>
+                  </figure>
+
+3. small sample size
+
+<figure>
+                      <img src="https://res.cloudinary.com/df2rp6zoo/image/upload/v1722393311/vhkal5owbcrv84b3rv6h.png" alt="">
+                      <figcaption></figcaption>
+                  </figure>
+
+
+small sample size → use permulation test
+
+
+<figure>
+                      <img src="https://res.cloudinary.com/df2rp6zoo/image/upload/v1722393313/eenly3hunsmr1bmdnfi1.png" alt="">
+                      <figcaption></figcaption>
+                  </figure>
+
+1. permutation test just cares if the distributions look the same
+1. Non-parametric tests
+	- Why does the rank sum test lead to p-values less than 5% more than 5% of the time when the populations have equal means but different variances? → null hypothesis is false. The null hypothesis of a t-test is that the means are equal, but the null hypothesis of a non-parametric test like the rank sum is that the distributions are the same, not just the means.
+2. Power
+	- probability of rejecting the null hypothesis when a specific alternative hypothesis is true
+	- in general: power is tied to a specific alternative hypothesis and thus  you need to specify an alternative hypothesis in order to calculate power → The power is the probability that your test will correctly notice when the null is not true. You are much more likely to notice if the truth is very far from the null than if the truth is close to the null. For example, in a two-sample t-test, the null hypothesis is that the difference in population means is zero. Assume for a moment that the two populations both have variance 1, and consider two samples of size 100. If the true difference is not zero but 400 billion, you will certainly get a tiny p-value and correctly reject the null, right? But if the true difference is .0000001, you will definitely not end up with a data set that allows you to rule out the possibility that the true difference is zero.
+	- tests are more powerful when sample sizes are larger
+	- non-parametric test are somewhat less powerful than t-tests, when normality assumptions met bc knowing normality of distribution gives you more information
 
 ### Log transformations for t-tests
 
+1. Why use log transformations & Interpreting a diff in mean logs on the original scale
+	- we want to use our data to look more normal to better support the methods we use
+	- Any time data consists of times / distance/ money / positive values, it’s likely that the histogram of the values is skewed to the right.
+	- Take log! Will look approximately normal now
 
-<div class="columns"><div class="column"><li>Why use log transformations & Interpreting a diff in mean logs on the original scale- we want to use our data to look more normal to better support the methods we use- Any time data consists of times / distance/ money / positive values, it’s likely that the histogram of the values is skewed to the right.- Take log! Will look approximately normal now</li></div><div class="column">![](https://res.cloudinary.com/df2rp6zoo/image/upload/v1720658830/oml3oumxgn2doc1tdylb.png)</div></div>
+<figure>
+                      <img src="https://res.cloudinary.com/df2rp6zoo/image/upload/v1722393321/c6jaarhig5tkdiweki4d.png" alt="">
+                      <figcaption></figcaption>
+                  </figure>
 
-<li>how do I interpret original value from log?</li>
-<li>Interpreting a confidence interval for the difference in mean logs, on the original scale</li>
+1. how do I interpret original value from log?
+	- $D = mean(log(x)) - mean(log(y)) \sim median(log(x)) - median(log(y)) = log(median(x)) - log(median(y)) = log(\frac{med(x)}{med(y)})$
+	- $e^{log(\frac{med(x)}{med(y)}} = e^D$, so $\frac{med(x)}{med(y)} = e^D$
+	- this is how we got from log scale D back to original scale medians
+1. Interpreting a confidence interval for the difference in mean logs, on the original scale
+	- $P(LB < mean(log(x)) - mean(log(y)) < UB) = 0.95$
+	- $P(e^{LB} < \frac{med(x)}{med(y)} < e^{UB}) = 0.95$
 
 ### Data Cleaning and Management
 
@@ -217,7 +303,7 @@ plot(BirthdayNum, ageYears,
 
 ### Reshaping and Manipulating Data (Tidyverse)
 
-<li>Introduction to Dplyr </li>
+1. Introduction to Dplyr
 
 ```r
 #Tibbles are data frames in R with unique printing and subsetting defaults, which are useful when working with large datasets. 
@@ -282,7 +368,7 @@ health %>%
 	filter(Indicator == "CPMODHS", Value > 20)
 ```
 
-<li>Introduction to TidyR</li>
+1. Introduction to TidyR
 
 ```r
 #TidyR is a helpful data reshaping package with four main functions: spread , gather, unite, and separate 
@@ -488,3 +574,4 @@ df_2020_county = df_2020 %>%
 
 - there are multiple rows for the same `party` within a single group (i.e., multiple vote counts for the same party in the same county and state), `spread()` won't know how to handle multiple values for the same key in a single group. It requires each combination of key columns and groups to be unique.
 - **Ensuring Uniqueness**: By adding an `id` column that assigns a unique row number to each entry within the groups, you essentially make each row unique even if the `party` and vote counts are the same.
+

@@ -1,12 +1,12 @@
 ---
 
-title: "R intro (week 0)"
+title: "[QAI] R intro (week 0)"
 excerpt: "start of QAI"
 date: 2024-06-03
 lastmod: 2024-06-03 23:08:41 -0400
 last_modified_at: 2024-06-03 23:08:41 -0400
 categories: R
-tags: R introductory statistics
+tags: qai R statistics
 classes:
 toc: true
 toc_label:

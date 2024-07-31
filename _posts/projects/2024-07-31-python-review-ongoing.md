@@ -2,9 +2,9 @@
 
 title: "python review (ongoing)"
 excerpt: "just some python review"
-date: 2024-07-30
-lastmod: 2024-07-30 22:04:23 -0400
-last_modified_at: 2024-07-30 22:04:23 -0400
+date: 2024-07-31
+lastmod: 2024-07-31 22:04:23 -0400
+last_modified_at: 2024-07-31 22:04:23 -0400
 categories: project
 tags: python
 classes:

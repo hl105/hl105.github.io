@@ -1,12 +1,12 @@
 ---
 
-title: "Statistical Testing (week 1)"
+title: "[QAI] Statistical Testing (week 1)"
 excerpt: "notes from week 1"
 date: 2024-06-10
 lastmod: 2024-06-10 21:58:49 -0400
 last_modified_at: 2024-06-10 21:58:49 -0400
 categories: R
-tags: qai R lecture
+tags: qai R statistics
 classes:
 toc: true
 toc_label:

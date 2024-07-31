@@ -1,7 +1,7 @@
 ---
 layout: single
 permalink: /about/
-author_profile: true
+author_profile: False
 classes: wide
 ---
 
@@ -26,7 +26,7 @@ classes: wide
         <li><a href="https://github.com/hl105/LLaMA-Case-Study">LLaMA case study</a></li>
     </ul>
     <div class="iframe-container">
-        <iframe src="https://drive.google.com/file/d/1-RJ0MJqQC0rLKBmhpYQPQqj6fG_iYBI9/preview" allow="autoplay"></iframe>
+        <iframe src="https://drive.google.com/file/d/1J8nUYgV77HiOdjxFOjuVdN-uonNPH5Lm/preview" allow="autoplay"></iframe>
     </div>
 </div>
 
@@ -42,12 +42,6 @@ classes: wide
         </a>
         <a href="#" class="image-text-button">
             <div class="image-text">
-                <img src="/assets/images/profile/film.png">
-                <div class="text">photography</div>
-            </div>
-        </a>
-        <a href="#" class="image-text-button">
-            <div class="image-text">
                 <img src="/assets/images/profile/pepero.png">
                 <div class="text">cooking 101</div>
             </div>
@@ -56,6 +50,12 @@ classes: wide
             <div class="image-text">
                 <img src="/assets/images/profile/travel.png">
                 <div class="text">love traveling! <br></div>
+            </div>
+        </a>
+        <a href="#" class="image-text-button">
+            <div class="image-text">
+                <img src="/assets/images/profile/film.png">
+                <div class="text">photography</div>
             </div>
         </a>
     </div>

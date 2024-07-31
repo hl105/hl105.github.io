@@ -2,9 +2,9 @@
 
 title: "cron tutorial"
 excerpt: "when you don't want to stay up all night collecting data"
-date: 2024-06-17
-lastmod: 2024-06-17 17:58:35 -0400
-last_modified_at: 2024-06-17 17:58:35 -0400
+date: 2024-07-17
+lastmod: 2024-07-17 17:58:35 -0400
+last_modified_at: 2024-07-17 17:58:35 -0400
 categories: project
 tags: tutorial scraping
 classes:
