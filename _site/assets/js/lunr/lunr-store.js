@@ -135,7 +135,7 @@ var store = [{
     "excerpt":"     404     Page not found :(    The requested page could not be found.   ","url": "http://localhost:4000/404.html"
   },{
     "title": null,
-    "excerpt":"  Hello World!           welcome to my blog.   Resume                03/28/2024 - under construction 👷‍♀️         TikTok Series: Project 1         Spotify API Exploration         LLaMA case study                           Personal Life       my life as a college sophomore                                                             (kpop) concerts                                                                              cooking 101                                                                              love traveling!                                                                                photography                             ","url": "http://localhost:4000/about/"
+    "excerpt":"  Hello World!           welcome to my blog.   Resume                03/28/2024 - under construction 👷‍♀️         TikTok Series: Project 1         Spotify API Exploration         LLaMA case study                           Personal Life       my life as a college sophomore                                                             (kpop) concerts                                                                              cooking 101                                                                              love traveling!                                                                                photography (new!)                             ","url": "http://localhost:4000/about/"
   },{
     "title": "Posts by Category",
     "excerpt":" ","url": "http://localhost:4000/categories/"

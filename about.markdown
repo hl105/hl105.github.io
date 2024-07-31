@@ -55,7 +55,7 @@ classes: wide
         <a href="#" class="image-text-button">
             <div class="image-text">
                 <img src="/assets/images/profile/film.png">
-                <div class="text">photography</div>
+                <div class="text">photography (new!)</div>
             </div>
         </a>
     </div>
