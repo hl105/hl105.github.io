@@ -132,7 +132,7 @@ var store = [{
         "teaser": null
       },{
         "title": "[QAI] Final Board Summary",
-        "excerpt":"inspired by:   Overview                                                                      Central Limit Theorem                                                                      Distribution                                                                                                                                         Testing                                                                                                                                         Regression                                                                                                                                         AND WE’RE DONE!  ","categories": ["stats"],
+        "excerpt":"inspired by: https://recipesds.tistory.com/   Overview                                                                      Central Limit Theorem                                                                      Distribution                                                                                                                                         Testing                                                                                                                                         Regression                                                                                                                                         AND WE’RE DONE!  ","categories": ["stats"],
         "tags": ["qai","review","statistics","inference"],
         "url": "/stats/qai-final-board-summary/",
         "teaser": null
