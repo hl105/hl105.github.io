@@ -5,7 +5,7 @@ excerpt: "notes from week 7"
 date: 2024-07-14
 lastmod: 2024-07-30 23:40:19 -0400
 last_modified_at: 2024-07-30 23:40:19 -0400
-categories: R
+categories: stats
 tags: QAI statistics R ANOVA regression
 classes:
 toc: true

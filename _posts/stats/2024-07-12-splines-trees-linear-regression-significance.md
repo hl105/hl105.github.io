@@ -5,7 +5,7 @@ excerpt: "notes from week 4"
 date: 2024-07-12
 lastmod: 2024-07-30 22:53:17 -0400
 last_modified_at: 2024-07-30 22:53:17 -0400
-categories: R
+categories: stats
 tags: QAI splines trees linear_regression significance
 classes:
 toc: true

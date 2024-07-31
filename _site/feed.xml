@@ -1,4 +1,56 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-07-31T01:51:21-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Johanna’s blog</title><subtitle>A place where I document new discoveries in my computer science journey. (and a place where you can learn more about me!)</subtitle><author><name>Johanna</name><email>hl105@wellesley.edu</email></author><entry><title type="html">python review (ongoing)</title><link href="http://localhost:4000/project/python-review-ongoing/" rel="alternate" type="text/html" title="python review (ongoing)" /><published>2024-07-31T00:00:00-04:00</published><updated>2024-07-31T22:04:23-04:00</updated><id>http://localhost:4000/project/python-review-ongoing</id><content type="html" xml:base="http://localhost:4000/project/python-review-ongoing/"><![CDATA[<h3 id="decorators"><a href="https://www.geeksforgeeks.org/decorators-in-python/">decorators</a></h3>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-07-31T04:31:44-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Johanna’s blog</title><subtitle>A place where I document new discoveries in my computer science journey. (and a place where you can learn more about me!)</subtitle><author><name>Johanna</name><email>hl105@wellesley.edu</email></author><entry><title type="html">[QAI] Final Board Summary</title><link href="http://localhost:4000/stats/qai-final-board-summary/" rel="alternate" type="text/html" title="[QAI] Final Board Summary" /><published>2024-07-31T00:00:00-04:00</published><updated>2024-07-31T03:58:10-04:00</updated><id>http://localhost:4000/stats/qai-final-board-summary</id><content type="html" xml:base="http://localhost:4000/stats/qai-final-board-summary/"><![CDATA[<p>inspired by:</p>
+
+<h3 id="overview">Overview</h3>
+
+<figure>
+                      <img src="https://res.cloudinary.com/df2rp6zoo/image/upload/v1722412744/brmr607m7vkeopv3cmp0.jpg" alt="" />
+                      <figcaption></figcaption>
+                  </figure>
+
+<h3 id="central-limit-theorem">Central Limit Theorem</h3>
+
+<figure>
+                      <img src="https://res.cloudinary.com/df2rp6zoo/image/upload/v1722412745/mzdosneuqoyjxsafwujb.jpg" alt="" />
+                      <figcaption></figcaption>
+                  </figure>
+
+<h3 id="distribution">Distribution</h3>
+
+<figure>
+                      <img src="https://res.cloudinary.com/df2rp6zoo/image/upload/v1722412747/hbemkdb4yezf20wd59ot.jpg" alt="" />
+                      <figcaption></figcaption>
+                  </figure>
+
+<figure>
+                      <img src="https://res.cloudinary.com/df2rp6zoo/image/upload/v1722412748/r3esturiohulesq6brq6.jpg" alt="" />
+                      <figcaption></figcaption>
+                  </figure>
+
+<h3 id="testing">Testing</h3>
+
+<figure>
+                      <img src="https://res.cloudinary.com/df2rp6zoo/image/upload/v1722412749/um3g9qwq3aw3jlnrzh7g.jpg" alt="" />
+                      <figcaption></figcaption>
+                  </figure>
+
+<figure>
+                      <img src="https://res.cloudinary.com/df2rp6zoo/image/upload/v1722412750/w6lrft7t5ro1lyrliop2.jpg" alt="" />
+                      <figcaption></figcaption>
+                  </figure>
+
+<h3 id="regression">Regression</h3>
+
+<figure>
+                      <img src="https://res.cloudinary.com/df2rp6zoo/image/upload/v1722412751/oala5ii3ysatzbctpyoc.jpg" alt="" />
+                      <figcaption></figcaption>
+                  </figure>
+
+<figure>
+                      <img src="https://res.cloudinary.com/df2rp6zoo/image/upload/v1722412752/rppthmqidus363uy9dok.jpg" alt="" />
+                      <figcaption></figcaption>
+                  </figure>
+
+<p>AND WE’RE DONE!</p>]]></content><author><name>Johanna</name><email>hl105@wellesley.edu</email></author><category term="stats" /><category term="qai" /><category term="review" /><category term="statistics" /><category term="inference" /><summary type="html"><![CDATA[looking at the bigger picture]]></summary></entry><entry><title type="html">python review (ongoing)</title><link href="http://localhost:4000/project/python-review-ongoing/" rel="alternate" type="text/html" title="python review (ongoing)" /><published>2024-07-31T00:00:00-04:00</published><updated>2024-07-31T22:04:23-04:00</updated><id>http://localhost:4000/project/python-review-ongoing</id><content type="html" xml:base="http://localhost:4000/project/python-review-ongoing/"><![CDATA[<h3 id="decorators"><a href="https://www.geeksforgeeks.org/decorators-in-python/">decorators</a></h3>
 
 <ol>
   <li>def: wrap another function to extend the behavior of the wrapped function w/o permanently modifying it</li>
@@ -625,7 +677,7 @@ Host github.com-hl105
            <span class="err">└</span> <span class="mi">5</span>
 
 <span class="nb">ZeroDivisionError</span><span class="p">:</span> <span class="n">division</span> <span class="n">by</span> <span class="n">zero</span>
-</code></pre></div></div>]]></content><author><name>Johanna</name><email>hl105@wellesley.edu</email></author><category term="project" /><category term="logging" /><category term="python" /><summary type="html"><![CDATA[better than logging and much better than printing]]></summary></entry><entry><title type="html">[QAI] Model Selection (week 7)</title><link href="http://localhost:4000/r/qai-model-selection-week-7/" rel="alternate" type="text/html" title="[QAI] Model Selection (week 7)" /><published>2024-07-15T00:00:00-04:00</published><updated>2024-07-31T00:14:49-04:00</updated><id>http://localhost:4000/r/qai-model-selection-week-7</id><content type="html" xml:base="http://localhost:4000/r/qai-model-selection-week-7/"><![CDATA[<!--postNo: 2024-07-31-->
+</code></pre></div></div>]]></content><author><name>Johanna</name><email>hl105@wellesley.edu</email></author><category term="project" /><category term="logging" /><category term="python" /><summary type="html"><![CDATA[better than logging and much better than printing]]></summary></entry><entry><title type="html">[QAI] Model Selection (week 7)</title><link href="http://localhost:4000/stats/qai-model-selection-week-7/" rel="alternate" type="text/html" title="[QAI] Model Selection (week 7)" /><published>2024-07-15T00:00:00-04:00</published><updated>2024-07-31T00:14:49-04:00</updated><id>http://localhost:4000/stats/qai-model-selection-week-7</id><content type="html" xml:base="http://localhost:4000/stats/qai-model-selection-week-7/"><![CDATA[<!--postNo: 2024-07-31-->
 
 <h3 id="model-selection">Model Selection</h3>
 
@@ -668,7 +720,7 @@ Host github.com-hl105
 
     <p><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/46a454de-d143-4526-a01f-0f13adda7dcc/26468104-a2fb-40a1-aac0-a98bf25795e3/Screenshot_2024-07-21_at_6.54.40_PM.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&amp;X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240731%2Fus-west-2%2Fs3%2Faws4_request&amp;X-Amz-Date=20240731T041507Z&amp;X-Amz-Expires=3600&amp;X-Amz-Signature=9ed18fb112d7f4a5aadb8540df2d19a0fe18ead24b431f639b46fcfacd8f8b75&amp;X-Amz-SignedHeaders=host&amp;x-id=GetObject" alt="Screenshot_2024-07-21_at_6.54.40_PM.png" /></p>
   </li>
-</ol>]]></content><author><name>Johanna</name><email>hl105@wellesley.edu</email></author><category term="R" /><category term="QAI" /><category term="statistics" /><category term="model" /><summary type="html"><![CDATA[notes from week 7]]></summary></entry><entry><title type="html">[QAI] ANOVA &amp;amp; Regression (week 7)</title><link href="http://localhost:4000/r/qai-anova-regression/" rel="alternate" type="text/html" title="[QAI] ANOVA &amp;amp; Regression (week 7)" /><published>2024-07-14T00:00:00-04:00</published><updated>2024-07-30T23:40:19-04:00</updated><id>http://localhost:4000/r/qai-anova--regression</id><content type="html" xml:base="http://localhost:4000/r/qai-anova-regression/"><![CDATA[<!--postNo: 2024-07-30-->
+</ol>]]></content><author><name>Johanna</name><email>hl105@wellesley.edu</email></author><category term="stats" /><category term="QAI" /><category term="statistics" /><category term="model" /><summary type="html"><![CDATA[notes from week 7]]></summary></entry><entry><title type="html">[QAI] ANOVA &amp;amp; Regression (week 7)</title><link href="http://localhost:4000/stats/qai-anova-regression/" rel="alternate" type="text/html" title="[QAI] ANOVA &amp;amp; Regression (week 7)" /><published>2024-07-14T00:00:00-04:00</published><updated>2024-07-30T23:40:19-04:00</updated><id>http://localhost:4000/stats/qai-anova--regression</id><content type="html" xml:base="http://localhost:4000/stats/qai-anova-regression/"><![CDATA[<!--postNo: 2024-07-30-->
 
 <p>all notes from QAI</p>
 
@@ -968,7 +1020,7 @@ Q: For which of the types of R output does the order of the predictors determine
 A: ANOVA. The regression output will always show the results of tests comparing the entire model, to the entire model without each predictor. R's default ANOVA output will built up the predictors one by one, testing whether the first predictor alone is better than the equal means model; whether the first two predictors together are better than the first predictor alone; whether the first three predictors together are better than the first two predictors together; etc. Though it seems strange that the output would depend on the variable order, the tests shown in this ANOVA output are more likely to show us whether we have important predictors in the data set. If two predictors are highly correlated with each other and with the outcome, the tests shown in the linear model for each of the predictors may not be significant, because including just one of the two predictors is sufficient (aka "multicollinearity").
 
 
-</wrong>]]></content><author><name>Johanna</name><email>hl105@wellesley.edu</email></author><category term="R" /><category term="QAI" /><category term="statistics" /><category term="R" /><category term="ANOVA" /><category term="regression" /><summary type="html"><![CDATA[notes from week 7]]></summary></entry><entry><title type="html">[QAI] Regression</title><link href="http://localhost:4000/r/qai-regression/" rel="alternate" type="text/html" title="[QAI] Regression" /><published>2024-07-13T00:00:00-04:00</published><updated>2024-07-30T23:21:10-04:00</updated><id>http://localhost:4000/r/qai-regression</id><content type="html" xml:base="http://localhost:4000/r/qai-regression/"><![CDATA[<!--postNo: 2024-07-30-->
+</wrong>]]></content><author><name>Johanna</name><email>hl105@wellesley.edu</email></author><category term="stats" /><category term="QAI" /><category term="statistics" /><category term="R" /><category term="ANOVA" /><category term="regression" /><summary type="html"><![CDATA[notes from week 7]]></summary></entry><entry><title type="html">[QAI] Regression</title><link href="http://localhost:4000/stats/qai-regression/" rel="alternate" type="text/html" title="[QAI] Regression" /><published>2024-07-13T00:00:00-04:00</published><updated>2024-07-30T23:21:10-04:00</updated><id>http://localhost:4000/stats/qai-regression</id><content type="html" xml:base="http://localhost:4000/stats/qai-regression/"><![CDATA[<!--postNo: 2024-07-30-->
 
 <p>all notes from QAI</p>
 
@@ -1191,170 +1243,4 @@ A: ANOVA. The regression output will always show the results of tests comparing 
                        <figcaption></figcaption>
                    </figure>
   </li>
-</ol>]]></content><author><name>Johanna</name><email>hl105@wellesley.edu</email></author><category term="R" /><category term="QAI" /><category term="regression" /><summary type="html"><![CDATA[notes from week 5]]></summary></entry><entry><title type="html">[QAI] splines, trees, linear regression, significance (week 4)</title><link href="http://localhost:4000/r/splines-trees-linear-regression-significance/" rel="alternate" type="text/html" title="[QAI] splines, trees, linear regression, significance (week 4)" /><published>2024-07-12T00:00:00-04:00</published><updated>2024-07-30T22:53:17-04:00</updated><id>http://localhost:4000/r/splines-trees-linear-regression-significance</id><content type="html" xml:base="http://localhost:4000/r/splines-trees-linear-regression-significance/"><![CDATA[<!--postNo: 2024-07-12-->
-
-<p>all notes from week 4</p>
-
-<h3 id="non-parametic-models-splines">Non-Parametic Models: Splines</h3>
-
-<ul>
-  <li>def: piecewise polynomials going through given data points and satisfying certain continuity conditions</li>
-  <li>need to be careful about overfitting</li>
-  <li>user provides x and y vectors</li>
-  <li>spline-fitting interpolates, using straight lines, polynomials, or other curves</li>
-  <li>model for the mean:
-    <ul>
-      <li>Units with the same value of X will have various values of Y</li>
-      <li>We predict the mean of the values of Y for units who share a value of X</li>
-      <li>Regression/ANOVA is a parametric model for the mean</li>
-    </ul>
-  </li>
-  <li>if there is really is a linear relationship between X and Y, the tree will try to approximate it with a bunch of horizontal line segments</li>
-</ul>
-
-<h3 id="regression-trees">Regression Trees</h3>
-
-<ul>
-  <li>def: specific type of decision tree used for regression tasks, where the target variable is continuous</li>
-  <li>residual: diff between true y and predicted</li>
-</ul>
-
-<h3 id="connecting-splines-tree-and-linear-regression">Connecting splines, tree, and linear regression</h3>
-
-<p>one overall equation for multiple predictors</p>
-
-<ul>
-  <li>mean(y| x, w) = $\beta_0+\beta_1x+\beta_2w+\beta_3xw$. Last term is <strong>interaction</strong></li>
-  <li>interaction:
-    <ul>
-      <li>relationship between x and mean might depend on w.</li>
-      <li>when the effector fo one predictor on outcome depends on another predictor</li>
-      <li>when w=0: mean = $\beta_0 + \beta_1x$</li>
-      <li>when w=1: mean = $(\beta_0 + \beta_2)+ (\beta_1+\beta_3)x$</li>
-      <li>so a no interaction model is a special case of th model that includes an interaction where $\beta_3=0$</li>
-    </ul>
-  </li>
-  <li>no interaction: when the effect of one predictor on outcome is independent of the other predictor
-    <ul>
-      <li>mean(y|x,w) = $\beta_0 + \beta_1x+\beta_2w$</li>
-      <li>when w=0: mean = $\beta_0+\beta_1x$</li>
-      <li>when w=1: mean = $(\beta_0+\beta_2)+\beta_1x$</li>
-    </ul>
-  </li>
-</ul>
-
-<h3 id="intro-to-linear-regression">Intro to linear regression</h3>
-
-<ol>
-  <li>models to compare — parametric models
-    <ul>
-      <li>equal means model:
-        <ul>
-          <li>mean(y|x) = some number.</li>
-          <li>
-            <p>For any value of x, predict that mean(y) is equal to the observed overall mean</p>
-
-            <figure>
-                        <img src="https://res.cloudinary.com/df2rp6zoo/image/upload/v1722394448/fqxxfve3mo3n3kfqldp3.png" alt="" />
-                        <figcaption></figcaption>
-                    </figure>
-          </li>
-        </ul>
-      </li>
-      <li>separate means model
-        <ul>
-          <li>predicts the mean of y that was observed in each group based on x</li>
-        </ul>
-
-        <figure>
-                        <img src="https://res.cloudinary.com/df2rp6zoo/image/upload/v1722394449/vwdpix39diklafesa0uf.png" alt="" />
-                        <figcaption></figcaption>
-                    </figure>
-      </li>
-      <li>linear regression model:
-        <ul>
-          <li>combination of these two</li>
-          <li>
-            <p>mean(y|x) = ax+b</p>
-
-            <figure>
-                        <img src="https://res.cloudinary.com/df2rp6zoo/image/upload/v1722394451/g21588iuf7xwjc7d0a6t.png" alt="" />
-                        <figcaption></figcaption>
-                    </figure>
-          </li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li>linear regression assumptions
-    <ul>
-      <li>linearity:
-        <ul>
-          <li>equation relating mean(y) to predictors is correct.</li>
-          <li>This is cruciual, and is usually not true.</li>
-          <li>
-            <table>
-              <tbody>
-                <tr>
-                  <td>This doesn’t mean the plot has to be a line! e.g. mean(y</td>
-                  <td>x) = a+bx+cx^2 → linearity assumption holds since the equation  to relate the predictor, the mean of the outcome, is true.</td>
-                </tr>
-              </tbody>
-            </table>
-          </li>
-        </ul>
-      </li>
-      <li>independence
-        <ul>
-          <li>within and between subgroups based on x</li>
-          <li>one datapoint doesn’t tell us anything about other points</li>
-        </ul>
-      </li>
-      <li>normality
-        <ul>
-          <li>of y-values for each subgroup based on X</li>
-        </ul>
-
-        <figure>
-                        <img src="https://res.cloudinary.com/df2rp6zoo/image/upload/v1722394455/rjccy74085dyr641vbxj.png" alt="" />
-                        <figcaption></figcaption>
-                    </figure>
-
-        <ul>
-          <li>residuals = actual y - predicted y</li>
-          <li>thus residual assumed to be normal</li>
-          <li>p-values, confidence interval, predictions are robust to normality assumption (exception coming)</li>
-        </ul>
-      </li>
-      <li>equal variance
-        <ul>
-          <li>of y-values within each subgroup based on x</li>
-        </ul>
-
-        <figure>
-                        <img src="https://res.cloudinary.com/df2rp6zoo/image/upload/v1722394457/iquxdflei56bnqwbugnr.png" alt="" />
-                        <figcaption></figcaption>
-                    </figure>
-
-        <ul>
-          <li>also known as homoskedasticy</li>
-          <li>required for p-values, CI to be correct</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li>Putting it all together
-    <ul>
-      <li>$mean(Y|X) = \beta_0+\beta_1X$</li>
-      <li>$[Y_i|X_i] \sim N(\beta_0+\beta_1X_1, \sigma^2)$</li>
-    </ul>
-  </li>
-</ol>
-
-<h3 id="practical-vs-statistical-significance">Practical vs. Statistical Significance</h3>
-
-<ul>
-  <li>look at the t statisic equation. depends on n, the sample size. If it’s big, we’ll get a bigger t statistic.</li>
-  <li>You can’t make decisions only on p-values, if there’s a big difference between groups, you should try collecting more data and see if it holds. If there’s a tiny difference, maybe you’re getting statistical difference only because you collected a lot of data.</li>
-  <li>For a particular study, we expect that larger sample size will lead to bigger t-statistic and smaller p-value</li>
-</ul>]]></content><author><name>Johanna</name><email>hl105@wellesley.edu</email></author><category term="R" /><category term="QAI" /><category term="splines" /><category term="trees" /><category term="linear_regression" /><category term="significance" /><summary type="html"><![CDATA[notes from week 4]]></summary></entry></feed>
+</ol>]]></content><author><name>Johanna</name><email>hl105@wellesley.edu</email></author><category term="stats" /><category term="QAI" /><category term="regression" /><summary type="html"><![CDATA[notes from week 5]]></summary></entry></feed>

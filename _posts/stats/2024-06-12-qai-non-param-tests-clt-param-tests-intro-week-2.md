@@ -5,7 +5,7 @@ excerpt: "notes from week 2"
 date: 2024-06-12
 lastmod: 2024-07-30 22:18:18 -0400
 last_modified_at: 2024-07-30 22:18:18 -0400
-categories: R
+categories: stats
 tags: qai CLT statistics R sign_test
 classes:
 toc: true

@@ -5,7 +5,7 @@ excerpt: "useful R commands"
 date: 2024-06-15
 lastmod: 2024-07-30 22:00:11 -0400
 last_modified_at: 2024-07-30 22:00:11 -0400
-categories: R
+categories: stats
 tags: QAI R
 classes:
 toc: true

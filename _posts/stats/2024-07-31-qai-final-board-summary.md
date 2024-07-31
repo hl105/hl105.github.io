@@ -5,7 +5,7 @@ excerpt: "looking at the bigger picture"
 date: 2024-07-31
 lastmod: 2024-07-31 03:58:10 -0400
 last_modified_at: 2024-07-31 03:58:10 -0400
-categories: R
+categories: stats
 tags: qai review statistics inference
 classes:
 toc: true

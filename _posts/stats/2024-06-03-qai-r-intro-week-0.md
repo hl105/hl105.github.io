@@ -5,7 +5,7 @@ excerpt: "start of QAI"
 date: 2024-06-03
 lastmod: 2024-06-03 23:08:41 -0400
 last_modified_at: 2024-06-03 23:08:41 -0400
-categories: R
+categories: stats
 tags: qai R statistics
 classes:
 toc: true

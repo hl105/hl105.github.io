@@ -11,7 +11,7 @@ do
     case $category in
         project ) output_dir="./_posts/projects"; break;;
         life ) output_dir="./_posts/life"; break;;
-        R )  output_dir="./_posts/R"; break;;
+        stats )  output_dir="./_posts/stats"; break;;
         * ) echo "Invalid option. Please select a number from the list.";;
     esac
 done

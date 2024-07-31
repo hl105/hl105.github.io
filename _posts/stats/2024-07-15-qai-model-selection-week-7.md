@@ -5,7 +5,7 @@ excerpt: "notes from week 7"
 date: 2024-07-15
 lastmod: 2024-07-31 00:14:49 -0400
 last_modified_at: 2024-07-31 00:14:49 -0400
-categories: R
+categories: stats
 tags: QAI statistics model
 classes:
 toc: true

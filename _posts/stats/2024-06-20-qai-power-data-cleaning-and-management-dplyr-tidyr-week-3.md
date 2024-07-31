@@ -5,7 +5,7 @@ excerpt: "notes from week 3"
 date: 2024-06-20
 lastmod: 2024-07-30 22:34:55 -0400
 last_modified_at: 2024-07-30 22:34:55 -0400
-categories: R
+categories: stats
 tags: qai statistics R Dplyr, tidyR, robustness, power
 classes:
 toc: true
