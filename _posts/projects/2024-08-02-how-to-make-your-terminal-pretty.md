@@ -5,7 +5,7 @@ excerpt: "when you are sick and tired of your boring terminal"
 date: 2024-08-02
 lastmod: 2024-08-02 02:16:08 -0400
 last_modified_at: 2024-08-02 02:16:08 -0400
-categories: projects
+categories: project
 tags: project terminal personalization
 classes:
 toc: true
