@@ -6,7 +6,7 @@ conda activate blog
 
 # Prompt the user to choose a category
 echo "Select a category for the blog post:"
-select category in "project" "life" "R"
+select category in "project" "life" "stats"
 do
     case $category in
         project ) output_dir="./_posts/projects"; break;;

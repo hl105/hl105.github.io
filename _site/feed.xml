@@ -1,56 +1,136 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-07-31T04:37:56-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Johanna’s blog</title><subtitle>A place where I document new discoveries in my computer science journey. (and a place where you can learn more about me!)</subtitle><author><name>Johanna</name><email>hl105@wellesley.edu</email></author><entry><title type="html">[QAI] Final Board Summary</title><link href="http://localhost:4000/stats/qai-final-board-summary/" rel="alternate" type="text/html" title="[QAI] Final Board Summary" /><published>2024-07-31T00:00:00-04:00</published><updated>2024-07-31T03:58:10-04:00</updated><id>http://localhost:4000/stats/qai-final-board-summary</id><content type="html" xml:base="http://localhost:4000/stats/qai-final-board-summary/"><![CDATA[<p>inspired by: https://recipesds.tistory.com/</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-08-02T02:21:13-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Johanna’s blog</title><subtitle>A place where I document new discoveries in my computer science journey. (and a place where you can learn more about me!)</subtitle><author><name>Johanna</name><email>hl105@wellesley.edu</email></author><entry><title type="html">How to make your terminal pretty</title><link href="http://localhost:4000/projects/how-to-make-your-terminal-pretty/" rel="alternate" type="text/html" title="How to make your terminal pretty" /><published>2024-08-02T00:00:00-04:00</published><updated>2024-08-02T02:16:08-04:00</updated><id>http://localhost:4000/projects/how-to-make-your-terminal-pretty</id><content type="html" xml:base="http://localhost:4000/projects/how-to-make-your-terminal-pretty/"><![CDATA[<!--postNo: 2024-08-02-->
 
-<h3 id="overview">Overview</h3>
+<p>Tired of staring at your boring terminal that doesn’t even have shortcuts?</p>
+
+<p>Time to learn iterm ฅ^._.^ฅ</p>
+
+<p>Here’s a screenshot of my cute terminal for your reference:</p>
 
 <figure>
-                      <img src="https://res.cloudinary.com/df2rp6zoo/image/upload/v1722412744/brmr607m7vkeopv3cmp0.jpg" alt="" />
+                      <img src="https://res.cloudinary.com/df2rp6zoo/image/upload/v1722579373/no8arq87aquvcmumf2bq.png" alt="" />
                       <figcaption></figcaption>
                   </figure>
 
-<h3 id="central-limit-theorem">Central Limit Theorem</h3>
+<h3 id="instructions">Instructions</h3>
+<ol>
+  <li>make sure your default shell is zsh
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">echo $SHELL</code>  should give you <code class="language-plaintext highlighter-rouge">/usr/bin/zsh</code></li>
+      <li>if not, do: <code class="language-plaintext highlighter-rouge">brew install zsh</code>  and <code class="language-plaintext highlighter-rouge">chsh -s /bin/zsh</code></li>
+      <li>restart your terminal</li>
+    </ul>
+  </li>
+  <li>
+    <p>install <code class="language-plaintext highlighter-rouge">Oh My Zsh</code></p>
 
-<figure>
-                      <img src="https://res.cloudinary.com/df2rp6zoo/image/upload/v1722412745/mzdosneuqoyjxsafwujb.jpg" alt="" />
-                      <figcaption></figcaption>
-                  </figure>
+    <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code> sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+</code></pre></div>    </div>
+  </li>
+  <li>Download ITerm2: <a href="http://www.iterm2.com/">iterm2.com</a></li>
+  <li>Install an iTerm Theme
+    <ul>
+      <li>Here, I’ll add mine but you can add whatever theme you want</li>
+      <li>all instructions below are from the theme owner’s repository: <a href="https://github.com/dogrocker/oh-my-zsh-powerline-cute-theme?tab=readme-ov-file">https://github.com/dogrocker/oh-my-zsh-powerline-cute-theme?tab=readme-ov-file</a></li>
+      <li>Part 1:
+        <ul>
+          <li>download powerline compatible fonts like <a href="http://input.fontbureau.com/">Input Mono</a></li>
+          <li>Make sure terminal is using 256-colors mode with <code class="language-plaintext highlighter-rouge">export TERM="xterm-256color"</code></li>
+          <li>Download the theme: <a href="http://raw.github.com/dogrocker/oh-my-zsh-powerline-cute-theme/master/cute-theme.zsh-theme">here</a></li>
+          <li>Put the file <strong>cute-theme.zsh-theme</strong> in <strong>~/.oh-my-zsh/themes/</strong></li>
+          <li>Configure the theme in your <strong>~/.zshrc</strong> file:<code class="language-plaintext highlighter-rouge">ZSH_THEME="cute-theme"</code> ( you can open the file with <code class="language-plaintext highlighter-rouge">open ~/.zshrc</code></li>
+        </ul>
+      </li>
+      <li>Part 2:
+        <ul>
+          <li>Launch iTerm 2</li>
+          <li>Type CMD+i (⌘+i)</li>
+          <li>Navigate to <strong>Colors</strong> tab</li>
+          <li>Click on <strong>Color Presets</strong></li>
+          <li>Click on <strong>Import</strong></li>
+          <li>Click on the <strong>schemes</strong> folder</li>
+          <li>Select the <strong>.itermcolors</strong> profiles you would like to import</li>
+          <li>Click on <strong>Color Presets</strong> and choose a color scheme</li>
+          <li>For <a href="http://iterm2.com/">iTerm 2</a> users, make sure you go into your settings and set both the regular font and the non-ascii font to powerline compatible <a href="https://github.com/powerline/fonts">fonts</a> or the prompt separators and special characters will not display correctly.</li>
+          <li>you can change the emoji (default is <code class="language-plaintext highlighter-rouge">~</code> ) by adding this line to .zshrc: <code class="language-plaintext highlighter-rouge">BULLETTRAIN_PROMPT_CHAR="🐹 "</code></li>
+        </ul>
+      </li>
+      <li>Part 3: Add Extra features
+        <ul>
+          <li>add background image: profile &gt; window &gt; background image</li>
+          <li>command-click opens filename/url: pointer &gt; general</li>
+        </ul>
+      </li>
+      <li>Part 4: Adding keyboard shortcut for opening iTerm 2
+        <ul>
+          <li>create automaton service
+            <ul>
+              <li>search (<code class="language-plaintext highlighter-rouge">⌘+space</code> ) for Automator.app on your computer</li>
+              <li>select <code class="language-plaintext highlighter-rouge">workflow</code></li>
+              <li>on the top search bar, search <code class="language-plaintext highlighter-rouge">Launch Application</code> and double click</li>
+              <li>select iTerm2 and save (<code class="language-plaintext highlighter-rouge">⌘+s</code>) the workflow</li>
+            </ul>
+          </li>
+          <li>set up keyboard shortcut
+            <ul>
+              <li>open  the <code class="language-plaintext highlighter-rouge">shortcuts</code>  application and add a new shortcut</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ol>
 
-<h3 id="distribution">Distribution</h3>
+<h3 id="shortcuts">Shortcuts</h3>
+<p>iTerm + Shell shortcuts in general</p>
 
-<figure>
-                      <img src="https://res.cloudinary.com/df2rp6zoo/image/upload/v1722412747/hbemkdb4yezf20wd59ot.jpg" alt="" />
-                      <figcaption></figcaption>
-                  </figure>
+<table>
+  <thead>
+    <tr>
+      <th><strong>Function</strong></th>
+      <th><strong>Shortcut</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>New Tab</td>
+      <td><code class="language-plaintext highlighter-rouge">⌘</code> + <code class="language-plaintext highlighter-rouge">T</code></td>
+    </tr>
+    <tr>
+      <td>Close Tab or Window</td>
+      <td><code class="language-plaintext highlighter-rouge">⌘</code> + <code class="language-plaintext highlighter-rouge">W</code> (same as many mac apps)</td>
+    </tr>
+    <tr>
+      <td>Split Window Vertically</td>
+      <td><code class="language-plaintext highlighter-rouge">⌘</code> + <code class="language-plaintext highlighter-rouge">D</code></td>
+    </tr>
+    <tr>
+      <td>Split Window Horizontally</td>
+      <td><code class="language-plaintext highlighter-rouge">⌘</code> + <code class="language-plaintext highlighter-rouge">Shift</code> + <code class="language-plaintext highlighter-rouge">D</code></td>
+    </tr>
+  </tbody>
+</table>
 
-<figure>
-                      <img src="https://res.cloudinary.com/df2rp6zoo/image/upload/v1722412748/r3esturiohulesq6brq6.jpg" alt="" />
-                      <figcaption></figcaption>
-                  </figure>
+<table>
+  <thead>
+    <tr>
+      <th>delete everything on line</th>
+      <th><code class="language-plaintext highlighter-rouge">Ctrl</code> + <code class="language-plaintext highlighter-rouge">U</code></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>search function</td>
+      <td><code class="language-plaintext highlighter-rouge">Ctrl</code> + <code class="language-plaintext highlighter-rouge">R</code></td>
+    </tr>
+    <tr>
+      <td>go back and forth by word</td>
+      <td><code class="language-plaintext highlighter-rouge">⌥</code> + <code class="language-plaintext highlighter-rouge">Left/Right Arrow Keys</code></td>
+    </tr>
+  </tbody>
+</table>
 
-<h3 id="testing">Testing</h3>
-
-<figure>
-                      <img src="https://res.cloudinary.com/df2rp6zoo/image/upload/v1722412749/um3g9qwq3aw3jlnrzh7g.jpg" alt="" />
-                      <figcaption></figcaption>
-                  </figure>
-
-<figure>
-                      <img src="https://res.cloudinary.com/df2rp6zoo/image/upload/v1722412750/w6lrft7t5ro1lyrliop2.jpg" alt="" />
-                      <figcaption></figcaption>
-                  </figure>
-
-<h3 id="regression">Regression</h3>
-
-<figure>
-                      <img src="https://res.cloudinary.com/df2rp6zoo/image/upload/v1722412751/oala5ii3ysatzbctpyoc.jpg" alt="" />
-                      <figcaption></figcaption>
-                  </figure>
-
-<figure>
-                      <img src="https://res.cloudinary.com/df2rp6zoo/image/upload/v1722412752/rppthmqidus363uy9dok.jpg" alt="" />
-                      <figcaption></figcaption>
-                  </figure>
-
-<p>AND WE’RE DONE!</p>]]></content><author><name>Johanna</name><email>hl105@wellesley.edu</email></author><category term="stats" /><category term="qai" /><category term="review" /><category term="statistics" /><category term="inference" /><summary type="html"><![CDATA[looking at the bigger picture]]></summary></entry><entry><title type="html">python review (ongoing)</title><link href="http://localhost:4000/project/python-review-ongoing/" rel="alternate" type="text/html" title="python review (ongoing)" /><published>2024-07-31T00:00:00-04:00</published><updated>2024-07-31T22:04:23-04:00</updated><id>http://localhost:4000/project/python-review-ongoing</id><content type="html" xml:base="http://localhost:4000/project/python-review-ongoing/"><![CDATA[<h3 id="decorators"><a href="https://www.geeksforgeeks.org/decorators-in-python/">decorators</a></h3>
+<p>and that’s how you get a pretty terminal!</p>]]></content><author><name>Johanna</name><email>hl105@wellesley.edu</email></author><category term="projects" /><category term="project" /><category term="terminal" /><category term="personalization" /><summary type="html"><![CDATA[when you are sick and tired of your boring terminal]]></summary></entry><entry><title type="html">python review (ongoing)</title><link href="http://localhost:4000/project/python-review-ongoing/" rel="alternate" type="text/html" title="python review (ongoing)" /><published>2024-07-31T00:00:00-04:00</published><updated>2024-07-31T22:04:23-04:00</updated><id>http://localhost:4000/project/python-review-ongoing</id><content type="html" xml:base="http://localhost:4000/project/python-review-ongoing/"><![CDATA[<h3 id="decorators"><a href="https://www.geeksforgeeks.org/decorators-in-python/">decorators</a></h3>
 
 <ol>
   <li>def: wrap another function to extend the behavior of the wrapped function w/o permanently modifying it</li>
@@ -215,7 +295,59 @@
  <span class="k">print</span><span class="p">(</span><span class="n">num</span><span class="p">())</span> <span class="c1">#400 (from (2*10)*(20)). i.e.,  decor1(decor(num)))
 </span></code></pre></div>    </div>
   </li>
-</ol>]]></content><author><name>Johanna</name><email>hl105@wellesley.edu</email></author><category term="project" /><category term="python" /><summary type="html"><![CDATA[just some python review]]></summary></entry><entry><title type="html">Is Mathematics Invented or Discovered?</title><link href="http://localhost:4000/life/is-mathematics-invented-or-discovered/" rel="alternate" type="text/html" title="Is Mathematics Invented or Discovered?" /><published>2024-07-30T00:00:00-04:00</published><updated>2024-07-30T23:32:48-04:00</updated><id>http://localhost:4000/life/is-mathematics-invented-or-discovered</id><content type="html" xml:base="http://localhost:4000/life/is-mathematics-invented-or-discovered/"><![CDATA[<!--postNo: 2024-07-30-->
+</ol>]]></content><author><name>Johanna</name><email>hl105@wellesley.edu</email></author><category term="project" /><category term="python" /><summary type="html"><![CDATA[just some python review]]></summary></entry><entry><title type="html">[QAI] Final Board Summary</title><link href="http://localhost:4000/stats/qai-final-board-summary/" rel="alternate" type="text/html" title="[QAI] Final Board Summary" /><published>2024-07-31T00:00:00-04:00</published><updated>2024-07-31T03:58:10-04:00</updated><id>http://localhost:4000/stats/qai-final-board-summary</id><content type="html" xml:base="http://localhost:4000/stats/qai-final-board-summary/"><![CDATA[<p>inspired by: https://recipesds.tistory.com/</p>
+
+<h3 id="overview">Overview</h3>
+
+<figure>
+                      <img src="https://res.cloudinary.com/df2rp6zoo/image/upload/v1722412744/brmr607m7vkeopv3cmp0.jpg" alt="" />
+                      <figcaption></figcaption>
+                  </figure>
+
+<h3 id="central-limit-theorem">Central Limit Theorem</h3>
+
+<figure>
+                      <img src="https://res.cloudinary.com/df2rp6zoo/image/upload/v1722412745/mzdosneuqoyjxsafwujb.jpg" alt="" />
+                      <figcaption></figcaption>
+                  </figure>
+
+<h3 id="distribution">Distribution</h3>
+
+<figure>
+                      <img src="https://res.cloudinary.com/df2rp6zoo/image/upload/v1722412747/hbemkdb4yezf20wd59ot.jpg" alt="" />
+                      <figcaption></figcaption>
+                  </figure>
+
+<figure>
+                      <img src="https://res.cloudinary.com/df2rp6zoo/image/upload/v1722412748/r3esturiohulesq6brq6.jpg" alt="" />
+                      <figcaption></figcaption>
+                  </figure>
+
+<h3 id="testing">Testing</h3>
+
+<figure>
+                      <img src="https://res.cloudinary.com/df2rp6zoo/image/upload/v1722412749/um3g9qwq3aw3jlnrzh7g.jpg" alt="" />
+                      <figcaption></figcaption>
+                  </figure>
+
+<figure>
+                      <img src="https://res.cloudinary.com/df2rp6zoo/image/upload/v1722412750/w6lrft7t5ro1lyrliop2.jpg" alt="" />
+                      <figcaption></figcaption>
+                  </figure>
+
+<h3 id="regression">Regression</h3>
+
+<figure>
+                      <img src="https://res.cloudinary.com/df2rp6zoo/image/upload/v1722412751/oala5ii3ysatzbctpyoc.jpg" alt="" />
+                      <figcaption></figcaption>
+                  </figure>
+
+<figure>
+                      <img src="https://res.cloudinary.com/df2rp6zoo/image/upload/v1722412752/rppthmqidus363uy9dok.jpg" alt="" />
+                      <figcaption></figcaption>
+                  </figure>
+
+<p>AND WE’RE DONE!</p>]]></content><author><name>Johanna</name><email>hl105@wellesley.edu</email></author><category term="stats" /><category term="qai" /><category term="review" /><category term="statistics" /><category term="inference" /><summary type="html"><![CDATA[looking at the bigger picture]]></summary></entry><entry><title type="html">Is Mathematics Invented or Discovered?</title><link href="http://localhost:4000/life/is-mathematics-invented-or-discovered/" rel="alternate" type="text/html" title="Is Mathematics Invented or Discovered?" /><published>2024-07-30T00:00:00-04:00</published><updated>2024-07-30T23:32:48-04:00</updated><id>http://localhost:4000/life/is-mathematics-invented-or-discovered</id><content type="html" xml:base="http://localhost:4000/life/is-mathematics-invented-or-discovered/"><![CDATA[<!--postNo: 2024-07-30-->
 
 <p>Thoughts on Roger Penrose’s  interview: Is Mathematics Invented or Discovered?</p>
 
@@ -1020,227 +1152,4 @@ Q: For which of the types of R output does the order of the predictors determine
 A: ANOVA. The regression output will always show the results of tests comparing the entire model, to the entire model without each predictor. R's default ANOVA output will built up the predictors one by one, testing whether the first predictor alone is better than the equal means model; whether the first two predictors together are better than the first predictor alone; whether the first three predictors together are better than the first two predictors together; etc. Though it seems strange that the output would depend on the variable order, the tests shown in this ANOVA output are more likely to show us whether we have important predictors in the data set. If two predictors are highly correlated with each other and with the outcome, the tests shown in the linear model for each of the predictors may not be significant, because including just one of the two predictors is sufficient (aka "multicollinearity").
 
 
-</wrong>]]></content><author><name>Johanna</name><email>hl105@wellesley.edu</email></author><category term="stats" /><category term="QAI" /><category term="statistics" /><category term="R" /><category term="ANOVA" /><category term="regression" /><summary type="html"><![CDATA[notes from week 7]]></summary></entry><entry><title type="html">[QAI] Regression</title><link href="http://localhost:4000/stats/qai-regression/" rel="alternate" type="text/html" title="[QAI] Regression" /><published>2024-07-13T00:00:00-04:00</published><updated>2024-07-30T23:21:10-04:00</updated><id>http://localhost:4000/stats/qai-regression</id><content type="html" xml:base="http://localhost:4000/stats/qai-regression/"><![CDATA[<!--postNo: 2024-07-30-->
-
-<p>all notes from QAI</p>
-
-<h3 id="estimating-regression-coefficients">Estimating regression coefficients</h3>
-
-<figure>
-                      <img src="https://res.cloudinary.com/df2rp6zoo/image/upload/v1722396076/azqfjamvnt3c6iu2qrob.png" alt="" />
-                      <figcaption></figcaption>
-                  </figure>
-
-<figure>
-                      <img src="https://res.cloudinary.com/df2rp6zoo/image/upload/v1722396077/sck6qts6xnehf93mimgg.png" alt="" />
-                      <figcaption></figcaption>
-                  </figure>
-
-<figure>
-                      <img src="https://res.cloudinary.com/df2rp6zoo/image/upload/v1722396078/p2psjxg25zse3qowedy2.png" alt="" />
-                      <figcaption></figcaption>
-                  </figure>
-
-<ol>
-  <li>
-    <p>Measuring the relationship between two variables: estimating $\beta_1$</p>
-
-    <figure>
-                       <img src="https://res.cloudinary.com/df2rp6zoo/image/upload/v1722396080/bvt8yomoowa7y6fixakk.png" alt="" />
-                       <figcaption></figcaption>
-                   </figure>
-  </li>
-  <li>Using correlation to estimate slope
-    <ul>
-      <li>r = sample corrleation</li>
-      <li>
-        <p>$\hat\beta_1 = r\frac{s_y}{s_x}$ : the estimated slope of a linear regression line is just a version of counting the number of points in each quadrant</p>
-
-        <figure>
-                        <img src="https://res.cloudinary.com/df2rp6zoo/image/upload/v1722396082/crcjtcim2dwfrcrmgwvr.png" alt="" />
-                        <figcaption></figcaption>
-                    </figure>
-      </li>
-    </ul>
-  </li>
-  <li>Justifying slope estimate as standardized correlation</li>
-  <li>
-
-    <figure>
-                      <img src="https://res.cloudinary.com/df2rp6zoo/image/upload/v1722396084/uftg75kea10ffi2gxl5u.png" alt="" />
-                      <figcaption></figcaption>
-                  </figure>
-
-    <ul>
-      <li>If $x_i = \frac{x_i-\bar{x}}{s_x}$ and $y_i= \frac{y_i-\bar{y}}{s_y}$, the slope of the regression line connected these standardized versions will be equal to the sample correlation r.  (bc we are creating versions of orginal variaables with s.d. 1)</li>
-      <li>ex)  If you calculate that sample correlation between income (in dollars) and age (in years) is 0.5 (making this up), and then you decide to report income in terms of thousands of dollars and recalculate, what will the sample correlation be equal to? → 0.5. The sample correlation does not change if you multiple on of the variables by a constant.</li>
-    </ul>
-  </li>
-  <li>Residuals
-    <ul>
-      <li>equal means model: subtract the same mean</li>
-      <li>sepaerate mean model:subtract the means of each group</li>
-    </ul>
-  </li>
-  <li>Justifying slope estimate by minimizing sums of squared residuals
-    <ul>
-      <li>$\beta_1 = \frac{\sum_{i=1}^{n} (Y_i - \bar{Y})(X_i - \bar{X})}{\sum_{i=1}^{n} (X_i - \bar{X})^2}$</li>
-      <li>$\text{SSR} = \sum_{i=1}^{n} \left( y_i - (\beta_0 + \beta_1 x_i) \right)^2$, we want to minimze this</li>
-      <li>$\hat{Y} = \hat{\beta}_0 + \hat{\beta}_1 \bar{X}$, plugging everything in, we can estimate the slope</li>
-    </ul>
-  </li>
-  <li>Justifying slope estimate by noticing that it is unbiased
-    <ul>
-      <li>so far, we’ve been talking about one dataset. But if our model ( the line) is true, the dataset is one of many that could have been generated.</li>
-      <li>you can repeatedly drawm samples of y for each x, and get estimates of  beta_0 and beta_1 → create a distribution of those estimates →  the average would be ur true beta_0 and beta_1</li>
-      <li>ex)  Consider the following simulation. We choose the following model for the mean: Mean(Y|X) = 2+3*X. We set the sample size to n=3, with X values 1, 2, and 3. Then, repeatedly, we simulate the values of Y for these three data points by calculating Mean(Y|X) and adding (standard normal, independent) noise. For each simulated set of Y’s, we estimate the slope of the regression of Y on X. We do this 1000 times, generating 1000 estimated slopes. What do we expect to see as the mean of these 1000 estimated slopes? →  3, which is the true slope of the line. This is the definition of unbiasedness: the average of our estimates over all possible data sets drawn from a certain model is equal to the true slope in the model.
-        <ol>
-          <li>Maximum Likelihood Estimate</li>
-        </ol>
-        <ul>
-          <li>says: use the estimates that make the data minimally suprising,
-    2. Weighted average of slopes</li>
-          <li></li>
-        </ul>
-
-\[\beta_1 = \frac{\sum_{i=1}^{n} (Y_i - \bar{Y})(X_i - \bar{X})}{\sum_{i=1}^{n} (X_i - \bar{X})^2}= \frac{1}{\sum_{i=1}^{n} (X_i - \bar{X})^2} \sum_{i=1}^{n} (Y_i - \bar{Y})(X_i - \bar{X})= \sum_{i=1}^{n} \frac{1}{\sum_{i=1}^{n} (X_i - \bar{X})^2} (Y_i - \bar{Y})(X_i - \bar{X})= \sum_{i=1}^{n} \frac{(Y_i - \bar{Y})(X_i - \bar{X})}{\sum_{i=1}^{n} (X_i - \bar{X})^2}= \sum_{i=1}^{n} \frac{(Y_i - \bar{Y})(X_i - \bar{X})(X_i - \bar{X})}{(X_i - \bar{X}) \sum_{i=1}^{n} (X_i - \bar{X})^2}= \sum_{i=1}^{n} \frac{(Y_i - \bar{Y})(X_i - \bar{X})^2}{(X_i - \bar{X}) \sum_{i=1}^{n} (X_i - \bar{X})^2}= \sum_{i=1}^{n} \left( \frac{(Y_i - \bar{Y})(X_i - \bar{X})^2}{(X_i - \bar{X}) \sum_{i=1}^{n} (X_i - \bar{X})^2} \right)\]
-
-        <ul>
-          <li>
-            <p>you can see something “slope-like” at the end. think of the other part as a “weight” of the slope. The further x_i is from the x_bar, the bigger the value would be → the points that have x’s that are far away from x_bar would have a big influence on what the slope would be</p>
-
-            <figure>
-                        <img src="https://res.cloudinary.com/df2rp6zoo/image/upload/v1722396087/ffblakbdog5hfffql1ty.png" alt="" />
-                        <figcaption></figcaption>
-                    </figure>
-
-            <p>diff point of view: we want to minimize SSR → more weight on</p>
-
-            <p>points that are far from middle</p>
-          </li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-</ol>
-
-<h3 id="inferences-about-regression">Inferences about regression</h3>
-
-<ol>
-  <li>Comparison to t-tests
-    <ul>
-      <li>
-        <p>take advantage of CLT to say</p>
-
-        <figure>
-                        <img src="https://res.cloudinary.com/df2rp6zoo/image/upload/v1722396089/q49wzht3jmurmlmy2vit.png" alt="" />
-                        <figcaption></figcaption>
-                    </figure>
-      </li>
-      <li>
-        <p>randomly pick some x, find the y on the line, and draw from normal dstiribtuion centered at that y with sigma squared variance. i.e, plug random x into $\beta_0+\beta_1x$ and add some normal error</p>
-      </li>
-    </ul>
-  </li>
-  <li>Hypothesis tests with linear regression
-    <ul>
-      <li>how far our estimate of the slope depends on  1. the residual variance 2. more x away from mean means bigger denominator → better estimate of our slope</li>
-      <li>
-\[\hat{\beta}_1 \sim N\left(\beta_1, \sigma^2 \left( \frac{1}{\sum_{i=1}^{n} (X_i - \bar{X})^2} \right) \right)\]
-      </li>
-      <li>
-\[\frac{\hat{\beta}_1 - \beta_1}{\sqrt{\sigma^2 \left( \frac{1}{\sum_{i=1}^{n} (X_i - \bar{X})^2} \right)}} \sim N(0, 1) \frac{\hat{\beta}_1 - \beta_1}{\sqrt{\hat\sigma^2 \left( \frac{1}{\sum_{i=1}^{n} (X_i - \bar{X})^2} \right)}} \sim t_{n-2}\]
-      </li>
-      <li>
-\[P \left( \hat{\beta}_1 + 2 \sqrt{\frac{\hat{\sigma}^2}{\sum_{i=1}^{n} (X_i - \bar{X})^2}} \text{ includes } \beta_1 \right) = 0.95 \]
-      </li>
-      <li>variance of intercept:</li>
-      <li>
-\[\hat\beta_0 \sim  N(\beta_0, \sigma^2 \left( \frac{1}{n} + \frac{\bar{X}^2}{\sum (X_i - \bar{X})^2} \right) )\]
-      </li>
-      <li>
-\[\hat{\mu}(Y|X=X_0) = \hat{\beta}_0 + \hat{\beta}_1 X_0\]
-      </li>
-      <li>(estimate mean of y given some x value)</li>
-      <li>
-\[\hat{\beta}_0 + \hat{\beta}_1 X_0 \sim N\left( \beta_0 + \beta_1 X_0, \sigma^2 \left( \frac{1}{n} + \frac{(X_0 - \bar{X})^2}{\sum_{i=1}^{n} (X_i - \bar{X})^2} \right) \right) \]
-      </li>
-      <li>(if i repeatedly sample and fit line, it varies, but by CLT, values are centered at true slope/intercept</li>
-    </ul>
-  </li>
-</ol>
-
-<h3 id="intervals-for-regression">Intervals for regression</h3>
-
-<ol>
-  <li>A simpler case
-    <ul>
-      <li>CI:
-        <ul>
-          <li>A range of values such that we think there’s a 95% chance that this interval covers the true population mean. So the more data I collect, the narrower this interval would be</li>
-          <li>i.e., as sample size increases, the confidence intervals width will shrink towards zero, but the prediction interval will still be wide</li>
-          <li>$\bar{Y} \pm 2 \, \text{SE}(\bar{Y}) \Rightarrow \bar{Y} \pm 2 \sqrt{\frac{S^2}{n}} $</li>
-        </ul>
-      </li>
-      <li>this is NOT the same as a prediction interval for a future value of y.
-        <ul>
-          <li>$Y: \quad \bar{Y} \pm 2 \sqrt{S^2 + \frac{S^2}{n}}$</li>
-          <li>S^2: estimated variance of y values given $\mu$</li>
-          <li>prediction interval will be <strong>wider</strong> then the confidence interval, because the actual data points vary around the mean</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li>Two types of confdience intervals for regression
-    <ul>
-      <li>confidence Intervals for coefficients: $\beta_0, \beta_1$
-        <ul>
-          <li>$P\left( \hat{\beta}_0 \pm 2 \, \text{SE}(\hat{\beta}_0) \text{ covers } \beta_0 \right) = 0.95 $</li>
-          <li>$P\left( \hat{\beta}_1 \pm 2 \, \text{SE}(\hat{\beta}_1) \text{ covers } \beta_1 \right) = 0.95 $</li>
-          <li>$\text{SE}(\hat{\beta}_0) = \sqrt{\hat{\sigma}^2 \left( \frac{1}{n} + \frac{\bar{X}^2}{\sum (X_i - \bar{X})^2} \right)} $</li>
-          <li>$\text{SE}(\hat{\beta}_1) = \sqrt{\frac{\hat{\sigma}^2}{\sum (X_i - \bar{X})^2}} $</li>
-        </ul>
-      </li>
-      <li>
-        <table>
-          <tbody>
-            <tr>
-              <td>confidence intervals for mean( Y</td>
-              <td>X= X_0)</td>
-            </tr>
-          </tbody>
-        </table>
-        <ul>
-          <li>
-            <table>
-              <tbody>
-                <tr>
-                  <td>$\text{Mean}(Y</td>
-                  <td>X=X_0) = \hat{\beta}_0 + \hat{\beta}_1 X_0 $</td>
-                </tr>
-              </tbody>
-            </table>
-          </li>
-          <li>
-            <table>
-              <tbody>
-                <tr>
-                  <td>$P \left( (\hat{\beta}_0 + \hat{\beta}_1 X_0) \pm 2 \sqrt{\sigma^2 \left( \frac{1}{n} + \frac{(X_0 - \bar{X})^2}{\sum (X_i - \bar{X})^2} \right)} \text{ covers mean}(Y</td>
-                  <td>X=X_0) = (\beta_0 + \beta_1 X_0) \right) = 0.95 $</td>
-                </tr>
-              </tbody>
-            </table>
-          </li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li>
-    <p>Prediction intervals for linear regression</p>
-
-    <figure>
-                       <img src="https://res.cloudinary.com/df2rp6zoo/image/upload/v1722396096/n4sc36egomqtrve6t9mb.png" alt="" />
-                       <figcaption></figcaption>
-                   </figure>
-  </li>
-</ol>]]></content><author><name>Johanna</name><email>hl105@wellesley.edu</email></author><category term="stats" /><category term="QAI" /><category term="regression" /><summary type="html"><![CDATA[notes from week 5]]></summary></entry></feed>
+</wrong>]]></content><author><name>Johanna</name><email>hl105@wellesley.edu</email></author><category term="stats" /><category term="QAI" /><category term="statistics" /><category term="R" /><category term="ANOVA" /><category term="regression" /><summary type="html"><![CDATA[notes from week 7]]></summary></entry></feed>
