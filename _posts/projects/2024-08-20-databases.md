@@ -24,13 +24,13 @@ author:
 This post is a summary of the web pages listed in the Sources section. All credits to them!
 
 
+# Data Management
+
+
 <figure>
-                      <img src="https://res.cloudinary.com/df2rp6zoo/image/upload/v1724185208/jb4fnypbwqnbmpcqihzr.png" alt="">
+                      <img src="https://res.cloudinary.com/df2rp6zoo/image/upload/v1724186350/hqg9d2xckwt0cwhvcdnt.jpg" alt="">
                       <figcaption></figcaption>
                   </figure>
-
-
-# Data Management
 
 
 ## Database normalization: 
