@@ -99,7 +99,7 @@ ensures that the input cannot alter the structure of the SQL command
 ```
 
 
-### Primary Key & Autoincrement
+## Primary Key & Autoincrement
 
 
 **Primary key**: simliar to the key in a python dictionary. Often automatically generated as an incrementing integer value for every record by the database engine.  
@@ -328,7 +328,7 @@ transactions = db.query(Transaction).options(
 # Order of Execution
 
 
-### Order of Execution:
+## Order of Execution:
 
 
 T database typically processes a SQL query n a specific logical order, regardless of the order in which the components appear in the query:
@@ -402,7 +402,7 @@ session.close() # clean up session and close
 ```
 
 
-### Q&A section
+## Q&A section
 
 - **Engine vs Connection vs Session?**
 	- Engine:
