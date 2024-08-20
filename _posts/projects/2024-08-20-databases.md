@@ -107,10 +107,6 @@ ensures that the input cannot alter the structure of the SQL command
 
 `name TEXT PRIMARY KEY`: This sets the `name` column as the primary key for the table. The `name` must be unique for each statement.
 
-
-## Errors
-
-
 **OperationalError**: database is locked:
 
 - typically occurs in SQLite when a database operation is attempted while the database is in use by another process or connection
@@ -118,9 +114,7 @@ ensures that the input cannot alter the structure of the SQL command
 
 # SQLAlchemy 
 
-
 **open-source SQL toolkit and Object-Relational Mapping (ORM) system for Python**
-
 
 ## why?
 
@@ -234,13 +228,13 @@ count = db.query(func.count(Transaction.id)).scalar()
 ## Explanation
 
 
-### **`ForeignKey`** **Creates a Connection**
+**`ForeignKey`** **Creates a Connection**
 
 
 This defines the existence of the relationship between tables.
 
 
-### **`relationship()`** **Establishes a Collection**
+**`relationship()`** **Establishes a Collection**
 
 
 If it’s a collection (e.g. Author has multiple books) we use a plural form (e.g books). When this function is called, SQLAlchemy finds the relationship in the class definition: `ForeignKey` . 
@@ -258,7 +252,7 @@ If it’s a collection (e.g. Author has multiple books) we use a plural form (e.
 ## Methods
 
 
-### .join()
+**.join()**
 
 
 scenario: you want to filter `GPTLabel` based on the `Transaction` description. 
@@ -272,7 +266,7 @@ existing_gpt_label = db.query(GPTLabel).join(Transaction).filter(Transaction.des
 `.join()` : combine rows from the `GPTLabel` table with rows from the `Transaction` table based on a related column (typically a foreign key relationship).
 
 
-### .joinedload()
+**.joinedload()**
 
 
 scenario: You want to retrieve not only a user’s transaction, but also their associated `GPTLabel`  and `Statement` :
